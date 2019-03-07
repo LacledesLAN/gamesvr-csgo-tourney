@@ -4,9 +4,21 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build & Shell In",
+            "label": "Build & Shell In", 
             "type": "shell",
             "command": "docker run --rm -it lltest/gamesvr-csgo-tourney;",
+            "dependsOn": "Build",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build & Run Tests",
+            "type": "shell",
+            "command": "docker run --rm -it --entrypoint \"/bin/bash\" lltest/gamesvr-csgo-tourney ./ll-tests/gamesvr-csgo.sh;",
             "dependsOn": "Build",
             "group": "build",
             "presentation": {
