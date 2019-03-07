@@ -1,0 +1,304 @@
+//Ez a fordításfájl az "advadmin" pluginhez van.
+//Ez a fordításfájl csak az "1.7.1" verzióját támogatja hivatalosan a pluginnek.
+//Frissítsd ezt a fájlt is minden frissítés után, ha kell, vagy "Error"-t kaphatsz a konzolodba.
+
+"Phrases"
+{
+	//-----CONNECT-----//	
+	"Player_Connected"
+	{
+		"hu"		"{1} csatlakozott"
+	}
+	"Player_Connected_From"
+	{
+		"hu"		"{1} csatlakozott ({2})"
+	}
+	
+	//-----OTHER-----//
+	"CMD_OnlyInTeam"
+	{
+		"hu"		"[SM] Csak csapatban lévő játékosokon használható!"
+	}
+	
+	"CMD_Invalid_Weapon"
+	{
+		"hu"		"[SM] A fegyvernév érvénytelen, de a dolog adva lett. Írd sm_equipments a konzolba az elérhető fegyvernevekért."
+	}
+	
+	"CMD_Invalid_Team"
+	{
+		"hu"		"[SM] A célcsapat érvénytelen!"
+	}
+	
+	//-----ADMINS-----//
+	"CMD_Admins_Online"
+	{
+		"hu"		"[SM] Online Adminok: {1}"
+	}
+	"CMD_Admins_Offline"
+	{
+		"hu"		"[SM] Nincsenek online adminok."
+	}
+	"CMD_Disabled"
+	{
+		"hu"		"[SM] Ez a parancs le van tiltva."
+	}
+	
+	//-----EXTEND-----//
+	"CMD_Extend"
+	{
+		"hu"		"A pálya meghosszabbítva {1} perccel."
+	}
+	"CMD_Extend_Usage"
+	{
+		"hu"		"[SM] Használat: sm_extend <[+/-] perc>"
+	}
+	//-----CLEARMAP-----//
+	"CMD_ClearMap"
+	{
+		"hu"		"A pálya feltakarítva."
+	}
+	//-----RESTARTGAME-----//
+	"CMD_RestartGame"
+	{
+		"hu"		"A játék újraindítva."
+	}
+	//-----RESTARTROUND-----//
+	"CMD_RestartRound"
+	{
+		"hu"		"A kör újraindítva."
+	}
+	
+	//-----EQUIPMENTS-----//
+	"CMD_Equipments_Weapons"
+	{
+		"hu"		"[SM] Érvényes fegyvernevek: {1}"
+	}
+	"CMD_Equipments_Items"
+	{
+		"hu"		"[SM] Érvényes felszerelésnevek: {1}"
+	}
+	"CMD_Equipments_Printed"
+	{
+		"hu"		"[SM] Az érvényes fegyvernevek ki lettek írva a konzolba!"
+	}
+	//-----PLAYSOUND-----//
+	"CMD_PlaySound_Usage"
+	{
+		"hu"			"[SM] Használat: sm_playsound <célpont> <hang [mappák/fájl.kiterjesztés]> <gyorsaság 100[50 - 250]> <hangerő 100[1 - 100]> <szorzó 1[1 - 10]>"
+	}
+	"CMD_PlaySound"
+	{
+		"hu"			"Hangot játszott neki: {1}, hang: {2}, gyorsaság: {3}, hangerő: {4}, szorzó: {5}"
+	}
+	
+	//-----TELEPORT-----//
+	"CMD_Teleport_Usage"
+	{
+		"hu"		"[SM] Használat: sm_teleport <célpont 1> <hagyd üresen a mentetthez | @blink a célkereszt teleporthoz | célpont 2>"
+	}
+	"CMD_Teleport_To_Blink"
+	{
+		"hu"		"{1} teleportálva a célkereszt pozícióra."
+	}
+	"CMD_Teleport_To_Player"
+	{
+		"hu"		"{1} teleportálva hozzá {2}"
+	}
+	"CMD_Teleport_NoSaved"
+	{
+		"hu"		"[SM] Nem rendelkezel mentett pozícióval!"
+	}
+	"CMD_Teleport_To_Saved"
+	{
+		"hu"		"{1} teleportálva a mentett pozícióra."
+	}
+	//-----SAVELOC-----//
+	"CMD_SaveVec"
+	{
+		"hu"		"[SM] A jelenlegi pozíciód el lett mentve."
+	}
+	
+	//-----TEAM-----//
+	"CMD_Team_Usage"
+	{
+		"hu"		"[SM] Használat: sm_team <célpont> <[1-3] | SPEC | SPECTATOR | T | CT> <[0/1] most/következő körben>"
+	}
+	"CMD_Team_Spec"
+	{
+		"hu"		"{1} áthelyezve ebbe a csapatba: Megfigyelők"
+	}
+	"CMD_Team_T"
+	{
+		"hu"		"{1} áthelyezve ebbe a csapatba: Terroristák"
+	}
+	"CMD_Team_CT"
+	{
+		"hu"		"{1} áthelyezve ebbe a csapatba: Terrorista-Elhárítók"
+	}
+	//-----SWAP-----//
+	"CMD_Swap_Usage"
+	{
+		"hu"		"[SM] Használat: sm_swap <célpont> <[0/1] most/következő körben>"
+	}
+	"CMD_Swap"
+	{
+		"hu"		"{1} áthelyezve a másik csapatba"
+	}
+	//-----SPEC-----//
+	"CMD_Team_Spec_Usage"
+	{
+		"hu"		"[SM] Használat: sm_spec <célpont> <[0/1] most/következő körben>"
+	}
+	//-----SCRAMBLE-----//
+	"CMD_Scramble"
+	{
+		"hu"		"Csapatok kiegyenlítve skill alapján."
+	}
+	
+	//-----GIVE-----//
+	"CMD_Give_Usage"
+	{
+		"hu"		"[SM] Használat: sm_give <célpont> <hagyd üresen a késhez | fegyvernév | szöveg>"
+	}
+	"CMD_Give"
+	{
+		"hu"		"{1} ezt kapta: {2}"
+	}
+	//-----EQUIP-----//
+	"CMD_Equip_Usage"
+	{
+		"hu"		"[SM] Használat: sm_equip <célpont> <hagyd üresen a késhez | fegyvernév | szöveg>"
+	}
+	"CMD_Equip"
+	{
+		"hu"		"{1} felszerelve ezzel: {2}"
+	}
+	//-----DISARM-----//
+	"CMD_Disarm_Usage"
+	{
+		"hu"		"[SM] Használat: sm_disarm <célpont>"
+	}
+	"CMD_Disarm"
+	{
+		"hu"		"{1} fegyvertelenítve"
+	}
+	
+	//-----RESPAWN-----//
+	"CMD_Respawn_Usage"
+	{
+		"hu"		"[SM] Használat: sm_respawn <célpont>"
+	}
+	"CMD_Respawn"
+	{
+		"hu"		"{1} újraélesztve"
+	}
+	//-----BURY-----//
+	"CMD_Bury_Usage"
+	{
+		"hu"		"[SM] Használat: sm_bury <célpont> <[0/1] elás/kiás>"
+	}
+	"CMD_Bury"
+	{
+		"hu"		"{1} el lett ásva"
+	}
+	
+	//-----SPEED-----//
+	"CMD_Speed_Usage"
+	{
+		"hu"		"[SM] Használat: sm_speed <célpont> <szorzó [0-500]>"
+	}
+	"CMD_Speed"
+	{
+		"hu"		"{1} sebessége megváltoztatva erre: {2}"
+	}
+	//-----GOD-----//
+	"CMD_God_Usage"
+	{
+		"hu"		"[SM] Használat: sm_god <célpont> <[0/1] ki/be>"
+	}
+	"CMD_God"
+	{
+		"hu"		"{1} istenmódja beállítva erre: {2}"
+	}
+	//-----HELMET-----//
+	"CMD_Helmet_Usage"
+	{
+		"hu"		"[SM] Használat: sm_helmet <célpont> <[0/1] ki/be>"
+	}
+	"CMD_Helmet"
+	{
+		"hu"		"{1} sisakja beállítva erre: {2}"
+	}
+	
+	//-----HEALTH-----//
+	"CMD_Health_Usage"
+	{
+		"hu"		"[SM] Használat: sm_hp <célpont> <[+/-] összeg>"
+	}
+	"CMD_Health"
+	{
+		"hu"		"{1} élete beállítva ennyire: {2}"
+	}
+	//-----ARMOR-----//
+	"CMD_Armour_Usage"
+	{
+		"hu"		"[SM] Használat: sm_armor <célpont> <[+/-] összeg>"
+	}
+	"CMD_Armour"
+	{
+		"hu"		"{1} páncélja beállítva ennyire: {2}"
+	}
+	//-----CASH-----//
+	"CMD_Cash_Usage"
+	{
+		"hu"		"[SM] Használat: sm_cash <célpont> <[+/-] összeg>"
+	}
+	"CMD_Cash"
+	{
+		"hu"		"{1} pénze beállítva ennyire: ${2}"
+	}
+	
+	//-----SETSTATS-----//
+	"CMD_SetStats_Usage"
+	{
+		"hu"		"[SM] Usage: sm_setstats <célpont> <statnév> <[+/-] érték>"
+	}
+	"CMD_SetStats"
+	{
+		"hu"		"{1} {2} statisztikája módosítva erre: {3}"
+	}
+	"CMD_SetStats_Values"
+	{
+		"hu"		"Érvénytelen érték. Érvényes értékek: kills, assists, deaths, mvps, scores, clan."
+	}
+	//-----TEAMSCORES-----//
+	"CMD_TeamScores_Usage"
+	{
+		"hu"		"[SM] Használat: sm_teamscores <[2/3] | T | CT> <[+/-] összeg>"
+	}
+	"CMD_TeamScores_T"
+	{
+		"hu"		"Terroristák pontjai beállítva erre: {1}"
+	}
+	"CMD_TeamScores_CT"
+	{
+		"hu"		"Terrorista-Elhárítók pontjai beállítva erre: {1}"
+	}
+	
+	//-----SPAWNCHICKEN-----//
+	"CMD_SpawnChicken_Usage"
+	{
+		"hu"		"[SM] Használat: sm_spawnchicken <test [0-6]> <robbanás [-1-9999]>"
+	}
+	"CMD_SpawnChicken"
+	{
+		"hu"		"Csirke elkészítve. Test: {1}, Robbanás: {2}"
+	}
+	
+	//-----SPAWNBALL-----//
+	"CMD_SpawnBall"
+	{
+		"hu"		"Labda felfújva, kezdődjön a játék."
+	}
+}

@@ -1,0 +1,82 @@
+//built using https://beta.configcreator.com/create/csgo/gamemodes_server.txt
+
+"Gamemodes_Server.txt"
+{
+    "gameTypes"
+    {
+        "classic"
+        {
+            "gameModes"
+            {
+                "casual"
+                {
+                    "mapgroupsMP"
+                    {
+                        "ll_bomb"
+                    }
+                }
+                "competitive"
+                {
+                    "mapgroupsMP"
+                    {
+                        "ll_bomb"
+                    }
+                }
+            }
+        }
+        "gungame"
+        {
+            "gameModes"
+            {
+                "armsrace"
+                {
+                    "mapgroupsMP"
+                    {
+                        "ll_bomb"
+                    }
+                }
+            }
+        }
+    }
+    "mapgroups"
+    {
+        "ll_bomb"
+        {
+            "name" "ll_bomb"
+            "maps"
+            {
+                "de_aztec" "0"
+                "de_blackgold" "1"
+                "de_castle" "2"
+                "de_cbble" "3"
+                "de_dust" "4"
+                "de_dust2" "5"
+                "de_inferno" "6"
+                "de_mist" "7"
+                "de_nuke" "8"
+                "de_overgrown" "9"
+                "de_overpass" "10"
+                "de_train" "11"
+                "de_vertigo" "12"
+                "cs_agency" "13"
+                "cs_downtown" "14"
+                "cs_museum" "15"
+                "cs_siege" "16"
+                "de_prodigy" "17"
+                "de_ruins" "18"
+                "de_season" "19"
+                "de_tulip" "20"
+                "de_vegas_csgo_v7" "21"
+            }
+        }
+        "ll_orange"
+        {
+            "name" "ll_orange"
+            "maps"
+            {
+                "clienttest-pillar" "0"
+                "poolday" "1"
+            }
+        }
+    }
+}

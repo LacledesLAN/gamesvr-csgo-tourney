@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build & Shell In",
+            "type": "shell",
+            "command": "docker run --rm -it lltest/gamesvr-csgo-tourney;",
+            "dependsOn": "Build",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build & Run Local Server",
+            "type": "shell",
+            "command": "docker run -it --net=host lltest/gamesvr-csgo-tourney ./srcds_run -game csgo +game_type 0 +game_mode 1 -console -usercon +map de_nuke +hostname \"gamesvr-csgo-tourney TEST\" +sv_lan 1 +mp_teamname_1 \"team1\" +mp_teamname_2 \"team2\" +rcon_password \"test123\" +tv_name \"gamesvr-csgo-tourney TV\" +tv_password \"test123\" +tv_relaypassword \"test123\"",
+            "dependsOn": "Build",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "clear; docker pull lacledeslan/gamesvr-csgo; docker build . -f linux.Dockerfile -t lltest/gamesvr-csgo-tourney --no-cache --build-arg BUILDNODE=localhost;",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
