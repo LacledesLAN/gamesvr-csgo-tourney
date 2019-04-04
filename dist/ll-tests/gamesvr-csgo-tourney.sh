@@ -17,20 +17,20 @@ declare LLTEST_RESULTSFILE="$LLTEST_NAME"".results";
 # Server log file should contain $1 because $2
 function should_have() {
     if ! grep -i -q "$1" "$LLTEST_LOGFILE"; then
-        echo $"[FAIL] - '$2'" >> "$LLTEST_RESULTSFILE";
+        echo $"[FAIL] - $2" >> "$LLTEST_RESULTSFILE";
         LLTEST_HASFAILURES=true;
     else
-        echo $"[PASS] - '$2'" >> "$LLTEST_RESULTSFILE";
+        echo $"[PASS] - $2" >> "$LLTEST_RESULTSFILE";
     fi;
 }
 
 # Server log file should NOT contain $1 because $2
 function should_lack() {
     if grep -i -q "$1" "$LLTEST_LOGFILE"; then
-        echo $"[FAIL] - '$2'" >> "$LLTEST_RESULTSFILE";
+        echo $"[FAIL] - $2" >> "$LLTEST_RESULTSFILE";
         LLTEST_HASFAILURES=true;
     else
-        echo $"[PASS] - '$2'" >> "$LLTEST_RESULTSFILE";
+        echo $"[PASS] - $2" >> "$LLTEST_RESULTSFILE";
     fi;
 }
 
@@ -158,7 +158,7 @@ should_have 'Server logging enabled.' 'Logging is enabled';
 should_have 'Server logging data to file logs/' 'Server is logging to the logs directory';
 
 # Check SourceMod/MetaMod plugins
-should_lack 'wrong ELF class: ELFCLASS64' 'No ELF class errors'
+should_lack 'Host_Error: DLL_Crosshairangle: not a client' '2019.03.28 bug not found (https://forums.alliedmods.net/showthread.php?t=315229)'
 #should_have '[SM/MM Information]' 'Meta Mod and Source Mod are both running';
 #should_have '===BEGIN SERVER STATUS===' 'LL status mod ran';
 #should_lack '<Error> "' 'LL status mod is not showing any SM plugins with errors'
@@ -172,6 +172,7 @@ should_lack 'wrong ELF class: ELFCLASS64' 'No ELF class errors'
 
 # Verify server responds to commands
 should_echo "say STARTING COMMAND TESTS" 'Console: STARTING COMMAND TESTS';
+should_echo "sv_cheats" '"sv_cheats" = "0" notify replicated';
 #####################################################################################################
 #####################################################################################################
 

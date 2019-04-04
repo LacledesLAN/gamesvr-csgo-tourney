@@ -4,10 +4,10 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build & Shell In", 
+            "label": "LATEST -- Build & Shell In", 
             "type": "shell",
             "command": "docker run --rm -it --exec \"/bin/bash\" lltest/gamesvr-csgo-tourney;",
-            "dependsOn": "Build",
+            "dependsOn": "LATEST -- Build",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -16,10 +16,10 @@
             "problemMatcher": []
         },
         {
-            "label": "Build & Run Tests",
+            "label": "LATEST -- Build & Run Tests",
             "type": "shell",
             "command": "docker run --rm -it --entrypoint \"/bin/bash\" lltest/gamesvr-csgo-tourney ./ll-tests/gamesvr-csgo-tourney.sh;",
-            "dependsOn": "Build",
+            "dependsOn": "LATEST -- Build",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -28,10 +28,10 @@
             "problemMatcher": []
         },
         {
-            "label": "Build & Run Local Server",
+            "label": "LATEST -- Build & Run Local Server",
             "type": "shell",
-            "command": "docker run -it --net=host lltest/gamesvr-csgo-tourney ./srcds_run -game csgo +game_type 0 +game_mode 1 -console -usercon +map de_nuke +hostname \"gamesvr-csgo-tourney TEST\" +sv_lan 1 +mp_teamname_1 \"team1\" +mp_teamname_2 \"team2\" +rcon_password \"test123\" +tv_name \"gamesvr-csgo-tourney TV\" +tv_password \"test123\" +tv_relaypassword \"test123\"",
-            "dependsOn": "Build",
+            "command": "docker run -it --net=host lltest/gamesvr-csgo-tourney --exec ./srcds_run -game csgo +game_type 0 +game_mode 1 -console -usercon +map de_nuke +hostname \"gamesvr-csgo-tourney TEST\" +sv_lan 1 +mp_teamname_1 \"team1\" +mp_teamname_2 \"team2\" +rcon_password \"test123\" +tv_name \"gamesvr-csgo-tourney TV\" +tv_password \"test123\" +tv_relaypassword \"test123\"",
+            "dependsOn": "LATEST -- Build",
             "group": "build",
             "presentation": {
                 "reveal": "always",
@@ -40,9 +40,20 @@
             "problemMatcher": []
         },
         {
-            "label": "Build",
+            "label": "LATEST -- Build",
             "type": "shell",
             "command": "clear; docker pull lacledeslan/gamesvr-csgo; docker build . -f linux.Dockerfile -t lltest/gamesvr-csgo-tourney --no-cache --build-arg BUILDNODE=localhost;",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "HASTY -- Build",
+            "type": "shell",
+            "command": "clear; docker pull lacledeslan/gamesvr-csgo; docker build . -f linux.hasty.Dockerfile -t lltest/gamesvr-csgo-tourney:hasty --no-cache --build-arg BUILDNODE=localhost;",
             "group": "build",
             "presentation": {
                 "reveal": "always",
