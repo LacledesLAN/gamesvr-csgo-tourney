@@ -31,7 +31,5 @@ steps:
     docker login -u $(dockerUser) -p $(dockerPass)
     docker push lacledeslan/gamesvr-csgo-tourney:hasty
   displayName: 'hasty - Push to Docker HUB'
-#- script: curl -X POST  "https://hooks.microbadger.com/images/lacledeslan/gamesvr-csgo/$(microBadgerToken)"
-#  displayName: 'Update MicroBadger'
-#- script: curl -X POST  "https://hooks.microbadger.com/images/lacledeslan/gamesvr-csgo/$(microBadgerToken)"
-#  displayName: 'Update MicroBadger'
+- script: curl -X POST  "https://hooks.microbadger.com/images/lacledeslan/gamesvr-csgo-tourney/$(microBadgerToken)"
+  displayName: 'latest - Update MicroBadger'
