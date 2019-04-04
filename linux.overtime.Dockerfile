@@ -32,8 +32,6 @@ RUN FILE="/app/csgo/cfg/gamemode_competitive_server.cfg" &&`
         echo "mp_maxrounds 7" >> $FILE &&`
         echo "mp_startmoney 10000" >> $FILE
 
-COPY --chown=CSGOWarmod:root /dist.linux /app/
-
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l CSGOTourneyOvertime CSGOTourney &&`
     chmod +x /app/ll-tests/*.sh &&`
