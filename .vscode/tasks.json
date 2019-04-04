@@ -6,7 +6,7 @@
         {
             "label": "Build & Shell In", 
             "type": "shell",
-            "command": "docker run --rm -it lltest/gamesvr-csgo-tourney;",
+            "command": "docker run --rm -it --exec \"/bin/bash\" lltest/gamesvr-csgo-tourney;",
             "dependsOn": "Build",
             "group": "build",
             "presentation": {
@@ -18,7 +18,7 @@
         {
             "label": "Build & Run Tests",
             "type": "shell",
-            "command": "docker run --rm -it --entrypoint \"/bin/bash\" lltest/gamesvr-csgo-tourney ./ll-tests/gamesvr-csgo.sh;",
+            "command": "docker run --rm -it --entrypoint \"/bin/bash\" lltest/gamesvr-csgo-tourney ./ll-tests/gamesvr-csgo-tourney.sh;",
             "dependsOn": "Build",
             "group": "build",
             "presentation": {
