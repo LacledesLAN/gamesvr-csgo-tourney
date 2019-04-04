@@ -13,12 +13,12 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
       org.label-schema.url="https://github.com/LacledesLAN/README.1ST" `
       org.label-schema.vcs-ref=$SOURCE_COMMIT `
       org.label-schema.vendor="Laclede's LAN" `
-      org.label-schema.description="LL Counter-Strike GO Tourney Hasty Server" `
-      org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-csgo-tourney"
+      org.label-schema.description="LL Counter-Strike GO Warmod Overtime Server" `
+      org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-csgo-warmod-overtime"
 
 #                          ____
 #                       _.' :  `._
-#                   .-.'`.  ;   .'`.-.             Begun, the hasty hacks have
+#                   .-.'`.  ;   .'`.-.             Begun, the overtime hacks have
 #          __      / : ___\ ;  /___ ; \      __
 #        ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
 #        :' `.t""--.. '<@.`;_  ',@>` ..--""j.' `;
@@ -29,28 +29,17 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
 #                   __.l"-:_JL_;-";.__
 RUN FILE="/app/csgo/cfg/gamemode_competitive_server.cfg" &&`
         echo "//===OVERTIME HACK" >> $FILE &&`
-        echo "bot_difficulty 0" >> $FILE &&`
-        echo "bot_quota 2" >> $FILE &&`
-        echo "bot_zombie 1" >> $FILE &&`
-        echo "mp_buytime 5" >> $FILE &&`
-        echo "mp_c4timer 25" >> $FILE &&`
-        echo "mp_defuser_allocation 2" >> $FILE &&`
-        echo "mp_freezetime 5" >> $FILE &&`
-        echo "mp_halftime_duration 8" >> $FILE &&`
-        echo "mp_match_restart_delay 12" >> $FILE &&`
-        echo "mp_maxrounds 4" >> $FILE &&`
-        echo "mp_overtime_maxrounds 3" >> $FILE &&`
-        echo "mp_win_panel_display_time 3" >> $FILE &&`
-        echo "sv_cheats 1" >> $FILE &&`
-    FILE="/app/csgo/cfg/server.cfg" &&`
-        echo "sv_cheats 1" >> $FILE
+        echo "mp_maxrounds 7" >> $FILE &&`
+        echo "mp_startmoney 10000" >> $FILE
+
+COPY --chown=CSGOWarmod:root /dist.linux /app/
 
 # UPDATE USERNAME & ensure permissions
-RUN usermod -l CSGOTourneyHasty CSGOTourney &&`
+RUN usermod -l CSGOTourneyOvertime CSGOTourney &&`
     chmod +x /app/ll-tests/*.sh &&`
     chmod 774 /app/csgo/cfg/*.cfg
 
-USER CSGOTourneyHasty
+USER CSGOTourneyOvertime
 
 WORKDIR /app/
 
