@@ -41,8 +41,10 @@ USER CSGOTourney
 
 WORKDIR /app/
 
-CMD ["--help"]
+#CMD ["--help"]
 
-ENTRYPOINT ["/app/csgotourney"]
+#ENTRYPOINT ["/app/csgotourney"]
+
+CMD ["/bin/bash"]
 
 ONBUILD USER root
