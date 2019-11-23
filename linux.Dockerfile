@@ -21,7 +21,10 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
       org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-csgo-tourney"
 
 # `RUN true` lines are work around for https://github.com/moby/moby/issues/36573
-COPY --chown=CSGO:root /dist /app
+COPY --chown=CSGO:root /dist/csgo /app/csgo
+RUN true
+
+COPY --chown=CSGO:root /dist/ll-tests /app/ll-tests
 RUN true
 
 COPY --chown=CSGO:root --from=sourcesser /app/csgotourney /app/
@@ -38,8 +41,10 @@ USER CSGOTourney
 
 WORKDIR /app/
 
-CMD ["--help"]
+#CMD ["--help"]
 
-ENTRYPOINT ["/app/csgotourney"]
+#ENTRYPOINT ["/app/csgotourney"]
+
+CMD ["/bin/bash"]
 
 ONBUILD USER root
