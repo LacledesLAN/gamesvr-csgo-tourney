@@ -152,6 +152,7 @@ should_lack 'Running the dedicated server as root' 'Server is not running under 
 should_have 'Game.dll loaded for "Counter-Strike: Global Offensive"' 'srcds_run loaded CSGO';
 should_have 'Server is hibernating' 'srcds_run succesfully hibernated';
 should_lack 'map load failed:' 'Server was able to load custom-content the map'
+should_lack 'Your server needs to be restarted in order to receive the latest update.' 'Server is not reporting itself as out of date';
 
 # LL Settings
 should_have 'Server logging enabled.' 'Logging is enabled';
