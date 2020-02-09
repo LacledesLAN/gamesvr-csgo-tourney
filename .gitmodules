@@ -1,0 +1,3 @@
+[submodule "dist/sourcemod-ll-configs"]
+	path = dist/sourcemod-ll-configs
+	url = https://github.com/LacledesLAN/sourcemod-configs

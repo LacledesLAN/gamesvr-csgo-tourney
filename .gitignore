@@ -1,3 +1,21 @@
+# Project Specific
+## Unneeded metamod shared objects
+/dist/linux/metamod/addons/metamod/bin/*
+!/dist/linux/metamod/addons/metamod/bin/linux64
+!/dist/linux/metamod/addons/metamod/bin/metamod.2.csgo.so
+!/dist/linux/metamod/addons/metamod/bin/server_i486.so
+!/dist/linux/metamod/addons/metamod/bin/server.so
+## Unneeded sourcemod plugins
+/dist/linux/sourcemod/addons/sourcemod/plugins/disabled
+/dist/linux/sourcemod/addons/sourcemod/plugins/funcommands.smx
+/dist/linux/sourcemod/addons/sourcemod/plugins/funvotes.smx
+/dist/linux/sourcemod/addons/sourcemod/plugins/nextmap.smx
+/dist/linux/sourcemod/addons/sourcemod/plugins/reservedslots.smx
+## Unneeded sourcemod shared objects
+/dist/linux/sourcemod/addons/sourcemod/bin/sourcemod.2.*.so
+!/dist/linux/sourcemod/addons/sourcemod/bin/sourcemod.2.csgo.so
+
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json

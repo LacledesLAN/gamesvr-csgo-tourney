@@ -60,6 +60,43 @@
                 "panel": "shared"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "GET5 -- Build",
+            "type": "shell",
+            "command": "clear; docker pull lacledeslan/gamesvr-csgo-tourney; docker build . -f linux.get5.Dockerfile -t lltest/gamesvr-csgo-tourney:get5 --no-cache --build-arg BUILDNODE=localhost",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "GET5 -- Build & Shell In",
+            "type": "shell",
+            "command": "docker run -it --rm lltest/gamesvr-csgo-tourney:get5",
+            "dependsOn": "GET5 -- Build",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Download git submodules",
+            "type": "shell",
+            "command": "git submodule foreach git pull origin master;",
+            "problemMatcher": [],
+            "promptOnClose": true
+        },
+        {
+            "label": "Update git submodules",
+            "type": "shell",
+            "command": "git submodule update --recursive --remote;",
+            "problemMatcher": [],
+            "promptOnClose": true
         }
     ]
 }

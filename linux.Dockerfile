@@ -1,7 +1,5 @@
 # escape=`
 
-FROM lacledeslan/sourceseer as sourcesser
-
 FROM lacledeslan/gamesvr-csgo
 
 HEALTHCHECK NONE
@@ -21,29 +19,21 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
       org.label-schema.vcs-url="https://github.com/LacledesLAN/gamesvr-csgo-tourney"
 
 # `RUN true` lines are work around for https://github.com/moby/moby/issues/36573
-COPY --chown=CSGO:root /dist/csgo /app/csgo
+COPY --chown=CSGO:root /dist/csgo-ll-tourney-configs /app/csgo
 RUN true
 
-COPY --chown=CSGO:root /dist/ll-tests /app/ll-tests
-RUN true
-
-COPY --chown=CSGO:root --from=sourcesser /app/csgotourney /app/
+COPY --chown=CSGO:root /dist/linux/ll-tests /app/ll-tests
 RUN true
 
 # UPDATE USERNAME & ensure permissions
 RUN usermod -l CSGOTourney CSGO &&`
     chmod +x /app/ll-tests/*.sh &&`
     mkdir -p /app/csgo/logs &&`
-    chmod 774 /app/csgo/logs &&`
-    chmod +x /app/csgotourney
+    chmod 774 /app/csgo/logs
 
 USER CSGOTourney
 
 WORKDIR /app/
-
-#CMD ["--help"]
-
-#ENTRYPOINT ["/app/csgotourney"]
 
 CMD ["/bin/bash"]
 

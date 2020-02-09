@@ -2,8 +2,6 @@
 
 FROM lacledeslan/gamesvr-csgo-tourney
 
-HEALTHCHECK NONE
-
 ARG BUILDNODE="unspecified"
 ARG SOURCE_COMMIT
 
