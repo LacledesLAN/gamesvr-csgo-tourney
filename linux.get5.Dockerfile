@@ -19,7 +19,7 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
 COPY --chown=CSGOTourney:root ./dist/linux/metamod/addons/ /app/csgo/addons/
 RUN true
 
-# Copy in agnostic metamod vdf
+# Copy in os-agnostic metamod vdf
 COPY --chown=CSGOTourney:root ./dist/metamod/addons/ /app/csgo/addons/
 RUN true
 
@@ -27,15 +27,15 @@ RUN true
 COPY --chown=CSGOTourney:root ./dist/linux/sourcemod/ /app/csgo/
 RUN true
 
-# Copy in agnostic global LL sourcemod configs
+# Copy in os-agnostic global LL sourcemod configs
 COPY --chown=CSGOTourney:root ./dist/sourcemod-ll-configs/ /app/csgo/
 RUN true
 
-# Copy in agnostic get5 sourcemod plugin
+# Copy in os-agnostic get5 sourcemod plugin
 COPY --chown=CSGOTourney:root ./dist/get5/ /app/csgo/
 RUN true
 
-# Copy in agnostic get5 LL configs
+# Copy in os-agnostic get5 LL configs
 COPY --chown=CSGOTourney:root ./dist/get5-ll-configs/ /app/csgo/
 RUN true
 
