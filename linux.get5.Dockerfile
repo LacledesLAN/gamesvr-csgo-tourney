@@ -39,7 +39,12 @@ RUN true
 COPY --chown=CSGOTourney:root ./dist/get5-ll-configs/ /app/csgo/
 RUN true
 
+# Copy in tests
+COPY --chown=CSGOTourney:root /dist/linux/ll-tests/gamesvr-csgo-tourney-get5.sh /app/ll-tests/gamesvr-csgo-tourney-get5.sh
+RUN true
+
 # UPDATE USERNAME & ensure permissions
-RUN usermod -l CSGOTourneyGet5 CSGOTourney
+RUN usermod -l CSGOTourneyGet5 CSGOTourney &&`
+    chmod +x /app/ll-tests/*gamesvr-csgo-tourney-get5.sh
 
 USER CSGOTourneyGet5

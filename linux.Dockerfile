@@ -22,7 +22,7 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
 COPY --chown=CSGO:root /dist/csgo-ll-tourney-configs /app/csgo
 RUN true
 
-COPY --chown=CSGO:root /dist/linux/ll-tests /app/ll-tests
+COPY --chown=CSGO:root /dist/linux/ll-tests/gamesvr-csgo-tourney.sh /app/ll-tests/gamesvr-csgo-tourney.sh
 RUN true
 
 # UPDATE USERNAME & ensure permissions

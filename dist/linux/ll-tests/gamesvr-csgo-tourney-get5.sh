@@ -3,7 +3,7 @@
 #####################################################################################################
 ### CONFIG VARS #####################################################################################
 declare LLTEST_CMD="/app/srcds_run -game csgo +game_type 0 +game_mode 1 +map de_lltest -insecure -tickrate 128 -norestart +sv_lan 1";
-declare LLTEST_NAME="gamesvr-csgo-tourney-$(date '+%H%M%S')";
+declare LLTEST_NAME="gamesvr-csgo-tourney-get5-$(date '+%H%M%S')";
 #####################################################################################################
 #####################################################################################################
 
@@ -157,6 +157,24 @@ should_lack 'Your server needs to be restarted in order to receive the latest up
 # LL Settings
 should_have 'Server logging enabled.' 'Logging is enabled';
 should_have 'Server logging data to file logs/' 'Server is logging to the logs directory';
+
+# Check SourceMod/MetaMod plugins
+should_lack 'Host_Error: DLL_Crosshairangle: not a client' '2019.03.28 bug not found (https://forums.alliedmods.net/showthread.php?t=315229)'
+should_have '======================BEGIN SERVER STATUS======================' 'LL status mod ran';
+should_lack '<Error>' 'LL status mod reports no errors';
+should_have 'Server Status-LL MOD' 'LL status mod reports itself';
+should_have 'Log Connections - LL Mod' 'LL status mod reports LL version of "log connections"';
+should_have 'Admin File Reader' 'status mod reports admin file reader';
+should_have 'Basic Info Triggers' 'status mod reports basic info triggers';
+should_have 'Basic Comm Control' 'status mod reports basic comm control';
+should_have 'Anti-Flood' "status mod reports anti-flood";
+should_have ' Get5' "status mode reports get5"
+should_lack 'Successfully updated gamedata file "' 'SourceMod is not self updating'
+should_lack 'SourceMod has been updated, please reload it or restart your server' 'SourceMod is not requesting restart'
+# TODO: add check should_lack fun commands
+# TODO: add check should_lack fun votes
+# TODO: add check should_lack nextmap
+# TODO: add check should_lack reserved slots
 
 # Verify server responds to commands
 should_echo "say STARTING COMMAND TESTS" 'Console: STARTING COMMAND TESTS';
