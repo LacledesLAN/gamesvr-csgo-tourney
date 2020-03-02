@@ -163,18 +163,18 @@ should_lack 'Host_Error: DLL_Crosshairangle: not a client' '2019.03.28 bug not f
 should_have '======================BEGIN SERVER STATUS======================' 'LL status mod ran';
 should_lack '<Error>' 'LL status mod reports no errors';
 should_have 'Server Status-LL MOD' 'LL status mod reports itself';
-should_have 'Log Connections - LL Mod' 'LL status mod reports LL version of "log connections"';
-should_have 'Admin File Reader' 'status mod reports admin file reader';
-should_have 'Basic Info Triggers' 'status mod reports basic info triggers';
-should_have 'Basic Comm Control' 'status mod reports basic comm control';
-should_have 'Anti-Flood' "status mod reports anti-flood";
-should_have ' Get5' "status mode reports get5"
+should_have ' "Log Connections - LL Mod' 'LL status mod reports LL version of "log connections"';
+should_have ' "Admin File Reader' 'status mod reports admin file reader';
+should_have ' "Basic Info Triggers' 'status mod reports basic info triggers';
+should_have ' "Basic Comm Control' 'status mod reports basic comm control';
+should_have ' "Anti-Flood' "status mod reports anti-flood";
+should_have ' "Get5' "status mode reports get5"
 should_lack 'Successfully updated gamedata file "' 'SourceMod is not self updating'
 should_lack 'SourceMod has been updated, please reload it or restart your server' 'SourceMod is not requesting restart'
-# TODO: add check should_lack fun commands
-# TODO: add check should_lack fun votes
-# TODO: add check should_lack nextmap
-# TODO: add check should_lack reserved slots
+should_lack ' "Fun Commands' "source mod plugin 'fun commands' should not be loaded"
+should_lack ' "Reserved Slots' "source mod plugin 'reserved slots' should not be loaded"
+should_lack ' "Nextmap' "source mod plugin 'nextmap' should not be loaded"
+should_lack ' "Fun Votes' "source mod plugin 'fun votes' should not be loaded"
 
 # Verify server responds to commands
 should_echo "say STARTING COMMAND TESTS" 'Console: STARTING COMMAND TESTS';
