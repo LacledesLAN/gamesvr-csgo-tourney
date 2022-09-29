@@ -3,10 +3,27 @@
         "csgo",
         "cvars",
         "gamesvr",
+        "Laclede's",
+        "Laclede’s",
         "lacledeslan",
         "maplist",
         "matchid",
         "metamod",
         "sourcemod"
-    ]
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "markdownlint.ignore": [
+        "LICENSE"
+    ],
+    "shellcheck.exclude": ["1091"],
+    "[markdown]": {
+        "editor.rulers": [140],
+        "editor.unicodeHighlight.ambiguousCharacters": true,
+        "editor.unicodeHighlight.invisibleCharacters": true,
+        "editor.wordWrap": "on"
+    }
 }

@@ -1,28 +1,24 @@
-# Project Specific
-## Unneeded metamod shared objects
-/dist/linux/metamod/addons/metamod/bin/*
-!/dist/linux/metamod/addons/metamod/bin/linux64
-!/dist/linux/metamod/addons/metamod/bin/metamod.2.csgo.so
-!/dist/linux/metamod/addons/metamod/bin/server_i486.so
-!/dist/linux/metamod/addons/metamod/bin/server.so
-## Unneeded sourcemod plugins
-/dist/linux/sourcemod/addons/sourcemod/plugins/disabled
-/dist/linux/sourcemod/addons/sourcemod/plugins/funcommands.smx
-/dist/linux/sourcemod/addons/sourcemod/plugins/funvotes.smx
-/dist/linux/sourcemod/addons/sourcemod/plugins/nextmap.smx
-/dist/linux/sourcemod/addons/sourcemod/plugins/reservedslots.smx
-## Unneeded sourcemod shared objects
-/dist/linux/sourcemod/addons/sourcemod/bin/sourcemod.2.*.so
-!/dist/linux/sourcemod/addons/sourcemod/bin/sourcemod.2.csgo.so
+### Project Specific ###
 
+## Unneeded metamod
+### shared objects
+dist/metamod/linux/addons/metamod/bin/*
+!dist/metamod/linux/addons/metamod/bin/linux64
+!dist/metamod/linux/addons/metamod/bin/metamod.2.csgo.so
+!dist/metamod/linux/addons/metamod/bin/server_i486.so
+!dist/metamod/linux/addons/metamod/bin/server.so
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history
+## Unneeded Sourcemod
+### plugins
+dist/sourcemod/linux/addons/sourcemod/plugins/disabled/*
+dist/sourcemod/linux/addons/sourcemod/plugins/funcommands.smx
+dist/sourcemod/linux/addons/sourcemod/plugins/funvotes.smx
+dist/sourcemod/linux/addons/sourcemod/plugins/nextmap.smx
+dist/sourcemod/linux/addons/sourcemod/plugins/reservedslots.smx
+dist/sourcemod/linux/addons/sourcemod/plugins/sounds.smx
+### shared objects
+dist/sourcemod/linux/addons/sourcemod/bin/sourcemod.2.*.so
+!dist/sourcemod/linux/addons/sourcemod/bin/sourcemod.2.csgo.so
 
 
 ### Linux Cruft ###
@@ -33,25 +29,42 @@
 .nfs*
 
 
-### macOS Cruft ###
-.AppleDouble
-._*
-.com.apple.timemachine.donotpresent
-.DocumentRevisions-V100
+### Mac OS Cruft ###
 .DS_Store
-.fseventsd
+.AppleDouble
 .LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+*.icloud
+
+
+### Visual Studio Code Cruft ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+.history
+.ionide
+.vscode/*.code-snippets
+*.code-workspace
 
 
 ### Windows Cruft ###
-*.stackdump
-*.lnk
-[Dd]esktop.ini
+[Tt]humbs.db
+[Tt]humbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
-Thumbs.db
-
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk

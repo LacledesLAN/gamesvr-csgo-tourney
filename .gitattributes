@@ -1,1 +1,20 @@
-* text=auto eol=lf
+* text=auto eol=lf encoding=utf-8
+
+*.*ignore           text
+*.cfg               text
+*.ini               text
+*.md                text diff=markdown
+*.sh                text
+*.txt               text
+*.vdf               text
+.editorconfig       text
+.gitattributes      text
+.gitconfig          text
+.gitkeep            text
+Dockerfile*         text
+LICENSE             text
+
+*.mmdb              binary
+*.so                binary
+*.smx               binary
+*.sp                binary
