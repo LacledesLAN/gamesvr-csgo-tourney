@@ -13,13 +13,13 @@
 
 	"maplist":
 	[
-		"de_inferno",
-		"de_nuke",
-		"de_vertigo",
-		"de_mirage",
-		"de_overpass",
-		"de_ancient",
-		"de_dust2"
+		"ar_poolstay",
+		"de_lltest",
+		"de_orange",
+		"de_rats_1337",
+		"de_tinyorange",
+		"fy_pool_day",
+		"fy_hangemhigh"
 	],
 
 	"team1": {
