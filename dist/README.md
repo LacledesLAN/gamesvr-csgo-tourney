@@ -1,16 +1,16 @@
 # Working with `/dist`
 
-| Directory        | Contents                                 | Version notes                              |
-| ---------------- | ---------------------------------------- | ------------------------------------------ |
-| /content         | Content for specific Docker images.      |                                            |
-|   ├─/base        | LL tournament configs.                   |                                            |
-|   └─/get5        | LL configs for the `get5` SM plugin.     |                                            |
-| /metamod/linux   | Linux version of `Metamod:Source`.       | version 1.11 - build 1148 as of 2022/09/30 |
-| /sourcemod       | SourceMod and related content.           |                                            |
-|   ├─/get5        | `get5` SourceMod plugin.                 | version 0.10.3 - e9451ba as of 2022/09/30  |
-|   ├─/linux       | Linux version of `SourceMod`.            | version 1.11 - build 6911 as of 2022/09/30 |
-|   ├─/ll          | Common LL SourceMod plugins and configs. |                                            |
-|   └─/warmod      | `WarMod [BFG] SourceMod` plugin.         | version 22.09.26.1915                      |
+| Directory        | Contents                                 | Version notes                              | Image Mount Location |
+| ---------------- | ---------------------------------------- | ------------------------------------------ | -------------------- |
+| /content         | Content for specific Docker images.      |                                            |                      |
+|   ├─/base        | LL tournament configs.                   |                                            | /app                 |
+|   └─/get5        | LL configs for the `get5` SM plugin.     |                                            | /app                 |
+| /metamod/linux   | Linux version of `Metamod:Source`.       | version 1.11 - build 1148 as of 2022/09/30 | /app/csgo            |
+| /sourcemod       | SourceMod and related content.           |                                            |                      |
+|   ├─/get5        | `get5` SourceMod plugin.                 | version 0.10.3 - e9451ba as of 2022/09/30  | /app/csgo            |
+|   ├─/linux       | Linux version of `SourceMod`.            | version 1.11 - build 6911 as of 2022/09/30 | /app/csgo            |
+|   ├─/ll          | Common LL SourceMod plugins and configs. |                                            | /app/csgo            |
+|   └─/warmod      | `WarMod [BFG] SourceMod` plugin.         | version 22.09.26.1915                      | /app/csgo            |
 
 ## Updating Third-Party Content
 
