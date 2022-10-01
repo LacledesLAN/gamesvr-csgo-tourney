@@ -16,11 +16,13 @@
 
 	"maplist":
 	[
-		"de_cache",
-		"de_dust2",
 		"de_inferno",
+		"de_nuke",
+		"de_vertigo",
 		"de_mirage",
-		"de_nuke"
+		"de_overpass",
+		"de_ancient",
+		"de_dust2"
 	],
 
 	"team1": {
@@ -28,9 +30,7 @@
 		"tag": "TEAM-BEAN",
 		"flag": "",
 		"logo": "",
-		"players":
-		{
-			}
+		"players": {}
 	},
 
 	"team2": {
@@ -38,9 +38,7 @@
 		"tag": "TEAM-PL",
 		"flag": "",
 		"logo": "",
-		"players":
-		{
-		}
+		"players": {}
 	},
 
 	"cvars": {

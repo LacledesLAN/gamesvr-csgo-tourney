@@ -1,27 +1,28 @@
 {
-	"matchid": "example_match",
-	"num_maps": 1,
-	"players_per_team": 5,
-	"min_players_to_ready": 1,
-	"min_spectators_to_ready": 0,
-	"skip_veto": false,
-	"veto_first": "random",
-	"side_type": "always_knife",
+    "matchid": "example_match",
+    "num_maps": 1,
+    "players_per_team": 5,
+    "min_players_to_ready": 1,
+    "min_spectators_to_ready": 0,
+    "skip_veto": false,
+    "veto_first": "random",
+    "side_type": "always_knife",
 
 	"spectators": {
-		"players":
-		[
-		]
+        "players": [ ]
 	},
 
 	"maplist":
 	[
-		"de_cache",
-		"de_dust2",
 		"de_inferno",
+		"de_nuke",
+		"de_vertigo",
 		"de_mirage",
-		"de_nuke"
+		"de_overpass",
+		"de_ancient",
+		"de_dust2"
 	],
+
 
 	"team1": {
 		"name": "TEAM-BEAN",

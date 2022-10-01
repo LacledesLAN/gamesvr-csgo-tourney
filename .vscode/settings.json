@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "autokick",
         "csgo",
         "cvars",
         "gamedata",
@@ -9,6 +10,7 @@
         "lacledeslan",
         "maplist",
         "matchid",
+        "maxrounds",
         "metamod",
         "sourcemod",
         "vdfs",

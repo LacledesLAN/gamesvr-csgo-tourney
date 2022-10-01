@@ -12,7 +12,16 @@
 		"players": []
 	},
 
-	"maplist":	[],
+	"maplist":
+	[
+		"de_inferno",
+		"de_nuke",
+		"de_vertigo",
+		"de_mirage",
+		"de_overpass",
+		"de_ancient",
+		"de_dust2"
+	],
 
 	"team1": {
 		"name": "",
