@@ -1,5 +1,5 @@
 ###################################################################################################
-# COPIED FROM .gitignore
+# KEEP UP TO DATE ALONG WITH .gitignore!
 ###################################################################################################
 
 # Project Specific
@@ -13,6 +13,12 @@ dist/metamod/linux/addons/metamod/bin/*
 !dist/metamod/linux/addons/metamod/bin/server.so
 
 ## Unneeded Sourcemod
+### bin
+dist/sourcemod/linux/addons/sourcemod/bin/sourcemod.2.*.so
+!dist/sourcemod/linux/addons/sourcemod/bin/sourcemod.2.csgo.so
+### configs
+dist/sourcemod/linux/addons/sourcemod/configs/admins_simple.ini
+dist/sourcemod/linux/addons/sourcemod/configs/core.cfg
 ### plugins
 dist/sourcemod/linux/addons/sourcemod/plugins/disabled/*
 dist/sourcemod/linux/addons/sourcemod/plugins/funcommands.smx
@@ -20,9 +26,6 @@ dist/sourcemod/linux/addons/sourcemod/plugins/funvotes.smx
 dist/sourcemod/linux/addons/sourcemod/plugins/nextmap.smx
 dist/sourcemod/linux/addons/sourcemod/plugins/reservedslots.smx
 dist/sourcemod/linux/addons/sourcemod/plugins/sounds.smx
-### shared objects
-dist/sourcemod/linux/addons/sourcemod/bin/sourcemod.2.*.so
-!dist/sourcemod/linux/addons/sourcemod/bin/sourcemod.2.csgo.so
 
 
 ###################################################################################################

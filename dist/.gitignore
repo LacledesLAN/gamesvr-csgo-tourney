@@ -10,6 +10,9 @@ metamod/linux/addons/metamod/bin/*
 ### /bin
 sourcemod/linux/addons/sourcemod/bin/sourcemod.2.*.so
 !sourcemod/linux/addons/sourcemod/bin/sourcemod.2.csgo.so
+### configs
+sourcemod/linux/addons/sourcemod/configs/admins_simple.ini
+sourcemod/linux/addons/sourcemod/configs/core.cfg
 ### /plugins
 sourcemod/linux/addons/sourcemod/plugins/disabled/*
 sourcemod/linux/addons/sourcemod/plugins/funcommands.smx
