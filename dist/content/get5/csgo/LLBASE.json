@@ -1,0 +1,36 @@
+{
+	"num_maps": 3,
+	"players_per_team": 5,
+	"min_players_to_ready": 5,
+	"min_spectators_to_ready": 0,
+	"skip_veto": false,
+	"veto_first": "random",
+	"side_type": "always_knife",
+
+	"spectators": {
+		"players": []
+	},
+
+	"maplist":
+	[
+		"de_inferno",
+		"de_nuke",
+		"de_vertigo",
+		"de_mirage",
+		"de_overpass",
+		"de_ancient",
+		"de_dust2"
+	],
+
+	"team1": {
+		"name": "",
+		"players": {}
+	},
+
+	"team2": {
+		"name": "",
+		"players": {}
+	},
+
+	"cvars": {}
+}
