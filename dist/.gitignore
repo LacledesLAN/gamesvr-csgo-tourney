@@ -20,3 +20,5 @@ sourcemod/linux/addons/sourcemod/plugins/funvotes.smx
 sourcemod/linux/addons/sourcemod/plugins/nextmap.smx
 sourcemod/linux/addons/sourcemod/plugins/reservedslots.smx
 sourcemod/linux/addons/sourcemod/plugins/sounds.smx
+### runable configs
+sourcemod/linux/cfg/sourcemod/sourcemod.cfg

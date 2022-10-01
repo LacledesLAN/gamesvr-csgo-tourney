@@ -26,7 +26,8 @@ dist/sourcemod/linux/addons/sourcemod/plugins/funvotes.smx
 dist/sourcemod/linux/addons/sourcemod/plugins/nextmap.smx
 dist/sourcemod/linux/addons/sourcemod/plugins/reservedslots.smx
 dist/sourcemod/linux/addons/sourcemod/plugins/sounds.smx
-
+### runable configs
+dist/sourcemod/linux/cfg/sourcemod/sourcemod.cfg
 
 ###################################################################################################
 # Unique to .dockerignore
