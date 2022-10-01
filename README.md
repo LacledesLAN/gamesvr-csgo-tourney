@@ -22,6 +22,38 @@ charity LAN-Parties. For third-parties we recommend using this repo only as a re
 | `latest`                        | Alias for the default LL tournament server, currently `base-get5`.      | PRODUCTION |
 | [hasty](#hasty)                 | Built from `latest`, configurations tweak for shorter play and testing. | TESTING    |
 
+### Build Hierarchy
+
+```text
+                                              ┌───────────────────────┐
+                                              │                       │
+                                              │  gamesvr-csgo:latest  │
+                                              │                       │
+                                              └───────────┬───────────┘
+                                                          │
+                                                          │
+                                           ┌──────────────▼──────────────┐
+                                           │                             │
+                                           │  gamesvr-csgo-tourney:base  │
+                                           │                             │
+                                           └──────┬───────┬──────┬───────┘
+                                                  │       │      │
+                    ┌─────────────────────────────┘       │      └───────────────────────────┐
+                    │                                     │                                  │
+┌───────────────────▼──────────────────┐   ┌──────────────▼──────────────┐   ┌───────────────▼───────────────┐
+│                                      │   │                             │   │                               │
+│  gamesvr-csgo-tourney:base-overtime  │   │  gamesvr-csgo-tourney:get5  │   │  gamesvr-csgo-tourney:warmod  │
+│                                      │   │                             │   │                               │
+└──────────────────────────────────────┘   └─────────────────────────────┘   └───────────────────────────────┘
+
+
+              ┌───────────────────────────────┐                  ┌─────────────────────────────────────┐
+              │                               │                  │                                     │
+              │  gamesvr-csgo-tourney:latest  ├──────────────────►  gamesvr-csgo-tourney:latest-hasty  │
+              │                               │                  │                                     │
+              └───────────────────────────────┘                  └─────────────────────────────────────┘
+```
+
 ## Third Party Content
 
 This repo includes content from other projects, including [Metamod:Source](https://www.sourcemm.net/),
