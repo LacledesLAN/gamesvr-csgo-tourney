@@ -1,0 +1,34 @@
+{
+    "matchid": "LL_Match",
+	"num_maps": 1,
+	"players_per_team": 5,
+	"min_players_to_ready": 5,
+	"min_spectators_to_ready": 0,
+	"skip_veto": true,
+	"veto_first": "team1",
+	"side_type": "always_knife",
+
+	"spectators": {
+		"players": []
+	},
+
+	"maplist":	[],
+
+	"team1": {
+		"name": "",
+		"tag": "",
+		"flag": "",
+		"logo": "",
+		"players": {}
+	},
+
+	"team2": {
+		"name": "",
+		"tag": "",
+		"flag": "",
+		"logo": "",
+		"players": {}
+	},
+
+	"cvars": {}
+}
