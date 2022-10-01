@@ -3,6 +3,7 @@
 *.*ignore           text
 *.cfg               text
 *.ini               text
+*.json              text
 *.md                text diff=markdown
 *.sh                text
 *.txt               text
@@ -14,6 +15,7 @@
 Dockerfile*         text
 LICENSE             text
 
+*.inc               binary
 *.mmdb              binary
 *.so                binary
 *.smx               binary

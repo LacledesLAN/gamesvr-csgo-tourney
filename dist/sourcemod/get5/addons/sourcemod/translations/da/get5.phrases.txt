@@ -1,0 +1,403 @@
+"Phrases"
+{
+    "ReadyToVetoInfoMessage"
+    {
+        "da"            "Skriv {1} når dit hold er klar til at veto."
+    }
+    "WaitingForCastersReadyInfoMessage"
+    {
+        "da"            "Venter på, at {1} skriver {2}."
+    }
+    "ReadyToRestoreBackupInfoMessage"
+    {
+        "da"            "Skriv {1} når du er klar til at genoprette match backup."
+    }
+    "ReadyToKnifeInfoMessage"
+    {
+        "da"            "Skriv {1} når du er klar til at knife."
+    }
+    "ReadyToStartInfoMessage"
+    {
+        "da"            "Skriv {1} når du er klar til at spille."
+    }
+    "YouAreReady"
+    {
+        "da"            "Du er blevet markeret som klar."
+    }
+    "YouAreReadyAuto"
+    {
+        "da"            "NOTE: Du er blevet markeret som klar grundet spilaktivitet. Skriv {1} hvis du ikke er klar."
+    }
+    "YouAreNotReady"
+    {
+        "da"            "Du er blevet markeret som ikke-klar."
+    }
+    "WaitingForEnemySwapInfoMessage"
+    {
+        "da"            "{1} vandt knife-runden. Venter på, at de skriver {2} eller {3}."
+    }
+    "WaitingForGOTVBrodcastEndingInfoMessage"
+    {
+        "da"            "Dette map vil skifte når nuværende GOTV broadcast er slut."
+    }
+    "WaitingForGOTVVetoInfoMessage"
+    {
+        "da"            "Dette map vil skifte når nuværende GOTV broadcast har fået map vetos vist."
+    }
+    "NoMatchSetupInfoMessage"
+    {
+        "da"			"Der er ikke konfigureret en kamp"
+    }
+    "YouAreNotAPlayerInfoMessage"
+    {
+        "da"            "Du er ikke en spiller i denne kamp"
+    }
+    "TeamIsFullInfoMessage"
+    {
+        "da"            "Dit hold er fyldt"
+    }
+    "TeamForfeitInfoMessage"
+    {
+        "da"            "{1} var ikke i stand til at gøre sig klar i tide og har opgivet."
+    }
+    "MinutesToForfeitMessage"
+    {
+        "da"            "{1} har {2} minutter til at gøre sig klar før de opgiver kampen."
+    }
+    "SecondsToForfeitInfoMessage"
+    {
+        "da"            "{1} har {2} sekunder til at gøre sig klar før de opgiver kampen."
+    }
+    "10SecondsToForfeitInfoMessage"
+    {
+        "da"            "{1} har 10 sekunder til at gøre sig klar før de opgiver kampen."
+    }
+    "MaxPausesUsedInfoMessage"
+    {
+        "da"            "{2} har brugt alle deres taktiske pauser ({1})."
+    }
+    "MaxPausesTimeUsedInfoMessage"
+    {
+        "da"            "{2} har brugt al deres taktiske pausetid ({1})."
+    }
+    "MatchPausedByTeamMessage"
+    {
+        "da"            "{1} har bedt om taktisk pause."
+    }
+    "MatchTechPausedByTeamMessage"
+    {
+        "da"            "{1} har bedt om teknisk pause."
+    }
+    "PausesNotEnabled"
+    {
+        "da"            "Pauser er ikke aktiveret."
+    }
+    "TechPausesNotEnabled"
+    {
+        "da"            "Tekniske pauser er ikke aktiveret."
+    }
+    "TechnicalPauseMidSentence"
+    {
+        "da"            "teknisk pause"
+    }
+    "TacticalPauseMidSentence"
+    {
+        "da"            "taktisk pause"
+    }
+    "TimeRemainingBeforeAnyoneCanUnpausePrefix"
+    {
+        "da"            "Resterende tid, før alle kan unpause"
+    }
+    "PauseTimeRemainingPrefix"
+    {
+        "da"            "Tilbageværende pausetid"
+    }
+    "AwaitingUnpause"
+    {
+        "da"            "Afventer unpause"
+    }
+    "PausedByAdministrator"
+    {
+        "da"            "En administrator har sat kampen på pause."
+    }
+    "PausedForBackup"
+    {
+        "da"            "Kampen er blevet gendannet fra en backup. Begge hold skal unpause for at fortsætte."
+    }
+    "UserCannotUnpauseAdmin"
+    {
+        "da"            "Pauser startet af administratorer kan kun afbrydes af administratorer."
+    }
+    "PausingTeamCannotUnpauseUntilFreezeTime"
+    {
+        "da"            "Du kan ikke afbryde din pause, før den er startet. Pauseanmodninger kan ikke annulleres."
+    }
+    "PauseRunoutInfoMessage"
+    {
+        "da"            "{1} er løbet tør for pausetid. Kampen fortsættes."
+    }
+    "TechPauseRunoutInfoMessage"
+    {
+        "da"            "Maksimal teknisk pauselængde er nået, og alle kan nu {1}."
+    }
+    "TechPauseNoTimeRemaining"
+    {
+        "da"            "{1} har ikke mere teknisk pausetid. Brug taktisk pause i stedet."
+    }
+    "TechPauseNoPausesRemaining"
+    {
+        "da"            "{1} har ikke flere tekniske pauser. Brug taktisk pause i stedet."
+    }
+    "TechPausePausesRemaining"
+    {
+        "da"            "Tekniske pauser tilbage for {1}: {2}"
+    }
+    "MatchUnpauseInfoMessage"
+    {
+        "da"            "{1} fortsatte kampen."
+    }
+    "WaitingForUnpauseInfoMessage"
+    {
+        "da"            "{1} vil gerne fortsætte kampen. Afventer {3} fra {2}."
+    }
+    "PausesLeftInfoMessage"
+    {
+        "da"            "Taktiske pauser tilbage for {1}: {2}"
+    }
+    "TeamFailToReadyMinPlayerCheck"
+    {
+        "da"            "Der skal være minimum {1} spiller(e) på serveren for at gøre klar."
+    }
+    "TeamReadyToVetoInfoMessage"
+    {
+        "da"            "{1} er klar til at veto."
+    }
+    "TeamReadyToRestoreBackupInfoMessage"
+    {
+        "da"            "{1} er klar til at genoprette match fra backup."
+    }
+    "TeamReadyToKnifeInfoMessage"
+    {
+        "da"            "{1} er klar til at knife om side."
+    }
+    "TeamReadyToBeginInfoMessage"
+    {
+        "da"            "{1} er klar til at begynde kampen."
+    }
+    "TeamNotReadyInfoMessage"
+    {
+        "da"            "{1} er ikke længere klar."
+    }
+    "ForceReadyInfoMessage"
+    {
+        "da"            "Du kan skrive {1} for tvinge dit hold klar, hvis der er mindre end {2} spillere."
+    }
+    "TeammateForceReadied"
+    {
+        "da"            "Dit hold blev tvunget klar af {1}."
+    }
+    "AdminForceReadyInfoMessage"
+    {
+        "da"            "En admin har tvunget holdende klar."
+    }
+    "AdminForceEndInfoMessage"
+    {
+        "da"            "En admin har tvunget kampen til at slutte."
+    }
+    "AdminForceEndWithWinnerInfoMessage"
+    {
+        "da"            "En admin har tvunget kampen til at slutte med {1} som vinder."
+    }
+    "AdminForcePauseInfoMessage"
+    {
+        "da"            "En admin har tvunget kampen til at pause."
+    }
+    "AdminForceUnPauseInfoMessage"
+    {
+        "da"            "En admin har tvunget kampen til at fortsætte."
+    }
+    "TeamWantsToReloadCurrentRound"
+    {
+        "da"            "{1} vil stoppe og genindlæse til starten af denne runde. Afventer {3} fra {2}."
+    }
+    "TeamWinningSeriesInfoMessage"
+    {
+        "da"            "{1} fører serien {2}-{3}."
+    }
+    "SeriesTiedInfoMessage"
+    {
+        "da"            "Serien er uafgjort {1}-{2}."
+    }
+    "NextSeriesMapInfoMessage"
+    {
+        "da"            "Det næste map i serien er {1} og det starter om {2}."
+    }
+    "TeamWonMatchInfoMessage"
+    {
+        "da"            "{1} har vundet kampen."
+    }
+    "TeamTiedMatchInfoMessage"
+    {
+        "da"            "{1} og {2} har spillet uafgjort."
+    }
+    "TeamWonSeriesInfoMessage"
+    {
+        "da"            "{1} har vundet serien {2}-{3}."
+    }
+    "MatchFinishedInfoMessage"
+    {
+        "da"            "Kampen er afsluttet"
+    }
+    "StopCommandNotEnabled"
+    {
+        "da"            "Stop-kommandoen er ikke aktiveret."
+    }
+    "StopCommandVotingReset"
+    {
+        "da"            "Anmodningen fra {1} om at stoppe spillet blev annulleret, da runden sluttede."
+    }
+    "BackupLoadedInfoMessage"
+    {
+        "da"            "Backup {1} indlæst."
+    }
+    "MatchBeginInSecondsInfoMessage"
+    {
+        "da"            "Kampen begynder om {1} sekunder."
+    }
+    "MatchIsLiveInfoMessage"
+    {
+        "da"            "Kampen er {GREEN}LIVE"
+    }
+    "KnifeIn5SecInfoMessage"
+    {
+        "da"            "Kniv-runden begynder om 5 sekunder."
+    }
+    "KnifeInfoMessage"
+    {
+        "da"            "Kniv!"
+    }
+    "TeamDecidedToStayInfoMessage"
+    {
+        "da"            "{1} har besluttet at blive."
+    }
+    "TeamDecidedToSwapInfoMessage"
+    {
+        "da"            "{1} har besluttet at skifte side."
+    }
+    "TeamLostTimeToDecideInfoMessage"
+    {
+        "da"            "{1} bliver, da de ikke tog en beslutning i tide."
+    }
+    "ChangingMapInfoMessage"
+    {
+        "da"            "Skifter map til {1}..."
+    }
+    "MapDecidedInfoMessage"
+    {
+        "da"            "Maps er blevet bestemt:"
+    }
+    "MapIsInfoMessage"
+    {
+        "da"            "Map {1}: {2}"
+    }
+    "TeamPickedMapInfoMessage"
+    {
+        "da"            "{1} valgte {2} som deres {3}. map."
+    }
+    "TeamSelectSideInfoMessage"
+    {
+        "da"            "{1} har valgt at start som {2} på {3}."
+    }
+    "TeamVetoedMapInfoMessage"
+    {
+        "da"            "{1} vetoed {2}."
+    }
+    "CaptainLeftOnVetoInfoMessage"
+    {
+        "da"            "En kaptajn forlod kampen under veto, pauser vetoen."
+    }
+    "ReadyToResumeVetoInfoMessage"
+    {
+        "da"            "Skriv {1}, når du er klar til at genoptage veto."
+    }
+    "MatchConfigLoadedInfoMessage"
+    {
+        "da"            "Indlæste kampopsætning."
+    }
+    "MoveToCoachInfoMessage"
+    {
+        "da"            "Da dit hold er fyldt, blev du flyttet til trænerposition."
+    }
+    "CannotLeaveCoachingTeamIsFull"
+    {
+        "da"            "Du kan ikke forlade trænerpositionen, da dit hold er fyldt."
+    }
+    "CoachingNotEnabled"
+    {
+        "da"            "Trænerindstillingen er ikke aktiveret. {1} skal sættes til 1."
+    }
+    "PlayerIsCoachingTeam"
+    {
+        "da"            "{1} er træner for {2}."
+    }
+    "CanOnlyCoachDuringWarmup"
+    {
+        "da"            "Du kan kun skifte til og fra trænerposition under opvarmning,"
+    }
+    "AllCoachSlotsFilledForTeam"
+    {
+        "da"            "Alle trænerpositioner ({1}) for dit hold er fyldt."
+    }
+    "ReadyTag"
+    {
+        "da"            "[KLAR]"
+    }
+    "NotReadyTag"
+    {
+        "da"            "[IKKE KLAR]"
+    }
+    "MapVetoPickMenuText"
+    {
+        "da"        "Vælg et map at spille:"
+    }
+    "MapVetoPickConfirmMenuText"
+    {
+        "da"        "Bekræft, at du vil spille {1}:"
+    }
+    "MapVetoBanMenuText"
+    {
+        "da"        "Vælg et map at VETO:"
+    }
+    "MapVetoBanConfirmMenuText"
+    {
+        "da"        "Bekræft, at du vil VETO {1}:"
+    }
+    "MapVetoSidePickMenuText"
+    {
+        "da"        "Vælg en side på {1}"
+    }
+    "MapVetoSidePickConfirmMenuText"
+    {
+        "da"        "Bekræft, at du vil starte {1}:"
+    }
+    "ConfirmPositiveOptionText"
+    {
+        "da"        "Ja"
+    }
+    "ConfirmNegativeOptionText"
+    {
+        "da"        "Nej"
+    }
+    "VetoCountdown"
+    {
+        "da"        "Veto begynder om {1} sekunder."
+    }
+    "NewVersionAvailable"
+    {
+        "da"        "En nyere version af Get5 er tilgængelig. Opdatering kan findes på {1}."
+    }
+    "PrereleaseVersionWarning"
+    {
+        "da"        "Serveren kører en uofficiel version af Get5 ({1}) designet til test og udvikling. Denne besked kan fjernes via {2}."
+    }
+}

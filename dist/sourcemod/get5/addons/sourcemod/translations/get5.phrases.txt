@@ -1,0 +1,464 @@
+"Phrases"
+{
+    "ReadyToVetoInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Type {1} when your team is ready to veto."
+    }
+    "WaitingForCastersReadyInfoMessage"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "Waiting for {1} to type {2} to begin."
+    }
+    "ReadyToRestoreBackupInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Type {1} when you are ready to restore the match backup."
+    }
+    "ReadyToKnifeInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Type {1} when you are ready to knife."
+    }
+    "ReadyToStartInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Type {1} when you are ready to begin."
+    }
+    "YouAreReady"
+    {
+        "en"            "You have been marked as ready."
+    }
+    "YouAreReadyAuto"
+    {
+        "#format"       "{1:s}"
+        "en"            "NOTE: You have been marked as ready due to game activity. Type {1} if you are not ready."
+    }
+    "YouAreNotReady"
+    {
+        "en"            "You have been marked as NOT ready."
+    }
+    "WaitingForEnemySwapInfoMessage"
+    {
+        "#format"       "{1:s},{2:s},{3:s}"
+        "en"            "{1} won the knife round. Waiting for them to type {2} or {3}."
+    }
+    "WaitingForGOTVBrodcastEndingInfoMessage"
+    {
+        "en"            "The map will change once the GOTV broadcast has ended."
+    }
+    "WaitingForGOTVVetoInfoMessage"
+    {
+        "en"            "The map will change once the GOTV broadcast has displayed the map vetos."
+    }
+    "NoMatchSetupInfoMessage"
+    {
+        "en"            "No match was set up"
+    }
+    "YouAreNotAPlayerInfoMessage"
+    {
+        "en"            "You are not a player in this match"
+    }
+    "TeamIsFullInfoMessage"
+    {
+        "en"            "Your team is full"
+    }
+    "TeamForfeitInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} failed to ready up in time and has forfeit."
+    }
+    "MinutesToForfeitMessage"
+    {
+        "#format"       "{1:s},{2:d}"
+        "en"            "{1} has {2} minutes left to ready up or they will forfeit the match."
+    }
+    "SecondsToForfeitInfoMessage"
+    {
+        "#format"       "{1:s},{2:d}"
+        "en"            "{1} has {2} seconds left to ready up or they will forfeit the match."
+    }
+    "10SecondsToForfeitInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has 10 seconds to ready up or forfeit the match."
+    }
+    "MaxPausesUsedInfoMessage"
+    {
+        "#format"       "{1:d},{2:s}"
+        "en"            "{2} has used all their tactical pauses ({1})."
+    }
+    "MaxPausesTimeUsedInfoMessage"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "{2} has used all their tactical pause time ({1})."
+    }
+    "MatchPausedByTeamMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has called for a tactical pause."
+    }
+    "MatchTechPausedByTeamMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has called for a technical pause."
+    }
+    "PausesNotEnabled"
+    {
+        "en"            "Pauses are not enabled."
+    }
+    "TechPausesNotEnabled"
+    {
+        "en"            "Technical pauses are not enabled."
+    }
+    "TechnicalPauseMidSentence"
+    {
+        "en"            "technical pause"
+    }
+    "TacticalPauseMidSentence"
+    {
+        "en"            "tactical pause"
+    }
+    "TimeRemainingBeforeAnyoneCanUnpausePrefix"
+    {
+        "en"            "Time remaining before anyone can unpause"
+    }
+    "PauseTimeRemainingPrefix"
+    {
+        "en"            "Remaining pause time"
+    }
+    "AwaitingUnpause"
+    {
+        "en"            "Awaiting unpause"
+    }
+    "PausedByAdministrator"
+    {
+        "en"            "An administrator has paused the match."
+    }
+    "PausedForBackup"
+    {
+        "en"            "The game was restored from a backup. Both teams must unpause to continue."
+    }
+    "UserCannotUnpauseAdmin"
+    {
+        "en"            "As an admin has called for this pause, it must also be unpaused by an admin."
+    }
+    "PausingTeamCannotUnpauseUntilFreezeTime"
+    {
+        "en"            "You cannot unpause before your pause has started. Pause requests cannot be canceled."
+    }
+    "PauseRunoutInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has run out of pause time. Unpausing the match."
+    }
+    "TechPauseRunoutInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Maximum technical pause length has been reached. Anyone may {1} now."
+    }
+    "TechPauseNoTimeRemaining"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has no more tech pause time. Please use tactical pauses."
+    }
+    "TechPauseNoPausesRemaining"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has no more tech pauses. Please use tactical pauses."
+    }
+    "TechPausePausesRemaining"
+    {
+        "#format"       "{1:s},{2:d}"
+        "en"            "Technical pauses remaining for {1}: {2}"
+    }
+    "MatchUnpauseInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} unpaused the match."
+    }
+    "WaitingForUnpauseInfoMessage"
+    {
+        "#format"       "{1:s},{2:s},{3:s}"
+        "en"            "{1} wants to unpause, waiting for {2} to type {3}."
+    }
+    "PausesLeftInfoMessage"
+    {
+        "#format"       "{1:s},{2:d}"
+        "en"            "Tactical pauses remaining for {1}: {2}"
+    }
+    "PrereleaseVersionWarning"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "You are running an unofficial version of Get5 ({1}) intended for development and testing only. This message can be disabled with {2}."
+    }
+    "NewVersionAvailable"
+    {
+        "#format"       "{1:s}"
+        "en"            "A newer version of Get5 is available. Please visit {1} to update."
+    }
+    "TeamFailToReadyMinPlayerCheck"
+    {
+        "#format"       "{1:d}"
+        "en"            "You must have at least {1} player(s) on the server to ready up."
+    }
+    "TeamReadyToVetoInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} is ready to veto."
+    }
+    "TeamReadyToRestoreBackupInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} is ready to restore the match backup."
+    }
+    "TeamReadyToKnifeInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} is ready to knife for sides."
+    }
+    "TeamReadyToBeginInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} is ready to begin the match."
+    }
+    "TeamNotReadyInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} is no longer ready."
+    }
+    "ForceReadyInfoMessage"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "You may type {1} to force-ready your team if you have less than {2} players."
+    }
+    "TeammateForceReadied"
+    {
+        "#format"       "{1:s}"
+        "en"            "Your team was force-readied by {1}."
+    }
+    "AdminForceReadyInfoMessage"
+    {
+        "en"            "An admin has force-readied all teams."
+    }
+    "AdminForceEndInfoMessage"
+    {
+        "en"            "An admin force-ended the match."
+    }
+    "AdminForcePauseInfoMessage"
+    {
+        "en"            "An admin paused the match."
+    }
+    "AdminForceEndWithWinnerInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "An admin force-ended the match, setting {1} as the winner."
+    }
+    "AdminForceUnPauseInfoMessage"
+    {
+        "en"            "An admin unpaused the match."
+    }
+    "TeamWantsToReloadCurrentRound"
+    {
+        "#format"       "{1:s},{2:s},{3:s}"
+        "en"            "{1} wants to restore the game to the beginning of the current round. {2} must confirm with {3}."
+    }
+    "TeamWinningSeriesInfoMessage"
+    {
+        "#format"       "{1:s},{2:d},{3:d}"
+        "en"            "{1} is winning the series {2}-{3}."
+    }
+    "SeriesTiedInfoMessage"
+    {
+        "#format"       "{1:d},{2:d}"
+        "en"            "The series is tied at {1}-{2}."
+    }
+    "NextSeriesMapInfoMessage"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "The next map in the series is {1} and it will start in {2}."
+    }
+    "TeamWonMatchInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has won the match."
+    }
+    "TeamTiedMatchInfoMessage"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "{1} and {2} have tied the match."
+    }
+    "TeamWonSeriesInfoMessage"
+    {
+        "#format"       "{1:s},{2:d},{3:d}"
+        "en"            "{1} has won the series {2}-{3}."
+    }
+    "MatchFinishedInfoMessage"
+    {
+        "en"            "The match is over"
+    }
+    "StopCommandNotEnabled"
+    {
+        "en"            "The stop command is not enabled."
+    }
+    "StopCommandVotingReset"
+    {
+        "#format"       "{1:s}"
+        "en"            "The request by {1} to stop the game was canceled as the round ended."
+    }
+    "BackupLoadedInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Successfully loaded backup {1}."
+    }
+    "MatchBeginInSecondsInfoMessage"
+    {
+        "#format"       "{1:d}"
+        "en"            "The match will begin in {1} seconds."
+    }
+    "MatchIsLiveInfoMessage"
+    {
+        "en"            "Match is {GREEN}LIVE"
+    }
+    "KnifeIn5SecInfoMessage"
+    {
+        "en"            "The knife round will begin in 5 seconds."
+    }
+    "KnifeInfoMessage"
+    {
+        "en"            "Knife!"
+    }
+    "TeamDecidedToStayInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has decided to stay."
+    }
+    "TeamDecidedToSwapInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} has decided to swap."
+    }
+    "TeamLostTimeToDecideInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} will stay since they did not make a decision in time."
+    }
+    "ChangingMapInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Changing map to {1}..."
+    }
+    "MapDecidedInfoMessage"
+    {
+        "en"            "The maps have been decided:"
+    }
+    "MapIsInfoMessage"
+    {
+        "#format"       "{1:d},{2:s}"
+        "en"            "Map {1}: {2}"
+    }
+    "TeamPickedMapInfoMessage"
+    {
+        "#format"       "{1:s},{2:s},{3:d}"
+        "en"            "{1} picked {2} as map {3}."
+    }
+    "TeamSelectSideInfoMessage"
+    {
+        "#format"       "{1:s},{2:s},{3:s}"
+        "en"            "{1} has selected to start on {2} on {3}."
+    }
+    "TeamVetoedMapInfoMessage"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "{1} vetoed {2}."
+    }
+    "CaptainLeftOnVetoInfoMessage"
+    {
+        "en"            "A captain left during the veto, pausing the veto."
+    }
+    "ReadyToResumeVetoInfoMessage"
+    {
+        "#format"       "{1:s}"
+        "en"            "Type {1} when you are ready to resume the veto."
+    }
+    "MatchConfigLoadedInfoMessage"
+    {
+        "en"            "Loaded match config."
+    }
+    "MoveToCoachInfoMessage"
+    {
+        "en"            "You were moved to the coach position as your team is full."
+    }
+    "CannotLeaveCoachingTeamIsFull"
+    {
+        "en"            "You cannot leave the coach position as your team is full."
+    }
+    "CoachingNotEnabled"
+    {
+        "#format"       "{1:s}"
+        "en"            "Coaching is not enabled. You must set {1} to 1."
+    }
+    "PlayerIsCoachingTeam"
+    {
+        "#format"       "{1:s},{2:s}"
+        "en"            "{1} is coaching {2}."
+    }
+    "CanOnlyCoachDuringWarmup"
+    {
+        "en"            "You can only change to or from coach during warmup."
+    }
+    "AllCoachSlotsFilledForTeam"
+    {
+        "#format"       "{1:d}"
+        "en"            "All coach slots ({1}) are currently filled for your team."
+    }
+    "ReadyTag"
+    {
+        "en"            "[READY]"
+    }
+    "NotReadyTag"
+    {
+        "en"            "[NOT READY]"
+    }
+    "MapVetoPickMenuText"
+    {
+        "en"        "Select a map to PLAY:"
+    }
+    "MapVetoPickConfirmMenuText"
+    {
+        "#format"       "{1:s}"
+        "en"        "Confirm you want to PLAY {1}:"
+    }
+    "MapVetoBanMenuText"
+    {
+        "en"        "Select a map to VETO:"
+    }
+    "MapVetoBanConfirmMenuText"
+    {
+        "#format"       "{1:s}"
+        "en"        "Confirm you want to VETO {1}:"
+    }
+    "MapVetoSidePickMenuText"
+    {
+        "#format"       "{1:s}"
+        "en"        "Select a side for {1}:"
+    }
+    "MapVetoSidePickConfirmMenuText"
+    {
+        "#format"       "{1:s}"
+        "en"        "Confirm you want to start {1}:"
+    }
+    "ConfirmPositiveOptionText"
+    {
+        "en"        "Yes"
+    }
+    "ConfirmNegativeOptionText"
+    {
+        "en"        "No"
+    }
+    "VetoCountdown"
+    {
+        "#format"   "{1:s}"
+        "en"        "Veto commencing in {1} seconds."
+    }
+}

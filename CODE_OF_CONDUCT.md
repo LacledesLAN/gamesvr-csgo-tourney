@@ -18,5 +18,5 @@ It is important that we resolve disagreements and differing views constructively
 Laclede’s LAN officers and project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki
 edits, issues, and other contributions that are not aligned to this Code of Conduct.
 
-Credits for the sources and inspiration of this code of conduct go to [Speak Up!](https://web.archive.org/web/20141109123859/http://speakup.io/coc.html)
-and [Contributor Covenant](https://archive.fo/ocyAN).
+Credits for the sources and inspiration of this code of conduct go to [Speak
+Up!](https://web.archive.org/web/20141109123859/http://speakup.io/coc.html) and [Contributor Covenant](https://archive.fo/ocyAN).

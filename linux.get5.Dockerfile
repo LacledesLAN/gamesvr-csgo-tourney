@@ -1,5 +1,5 @@
 # escape=`
-FROM lacledeslan/gamesvr-csgo-tourney
+FROM lacledeslan/gamesvr-csgo-tourney:base
 
 ARG BUILDNODE="unspecified"
 ARG SOURCE_COMMIT
@@ -15,36 +15,29 @@ LABEL maintainer="Laclede's LAN <contact @lacledeslan.com>" `
 
 # `RUN true` lines are work around for https://github.com/moby/moby/issues/36573
 
-# Copy in linux/metamod
-COPY --chown=CSGOTourney:root ./dist/linux/metamod/addons/ /app/csgo/addons/
+# Linux version of `Metamod:Source`.
+COPY --chown=CSGOTourneyBase:root ./dist/metamod/linux /app/csgo
 RUN true
 
-# Copy in os-agnostic metamod vdf
-COPY --chown=CSGOTourney:root ./dist/metamod/addons/ /app/csgo/addons/
+# Linux version of `SourceMod`.
+COPY --chown=CSGOTourneyBase:root ./dist/sourcemod/linux /app/csgo
 RUN true
 
-# Copy in linux/sourcemod
-COPY --chown=CSGOTourney:root ./dist/linux/sourcemod/ /app/csgo/
+# `get5` SourceMod plugin.
+COPY --chown=CSGOTourneyBase:root ./dist/sourcemod/get5 /app/csgo
 RUN true
 
-# Copy in os-agnostic global LL sourcemod configs
-COPY --chown=CSGOTourney:root ./dist/sourcemod-ll-configs/ /app/csgo/
+# Common LL SourceMod plugins and configs.
+COPY --chown=CSGOTourneyBase:root ./dist/sourcemod/ll /app/csgo
 RUN true
 
-# Copy in os-agnostic get5 sourcemod plugin
-COPY --chown=CSGOTourney:root ./dist/get5/ /app/csgo/
-RUN true
-
-# Copy in os-agnostic get5 LL configs
-COPY --chown=CSGOTourney:root ./dist/get5-ll-configs/ /app/csgo/
-RUN true
-
-# Copy in tests
-COPY --chown=CSGOTourney:root /dist/linux/ll-tests/gamesvr-csgo-tourney-get5.sh /app/ll-tests/gamesvr-csgo-tourney-get5.sh
-RUN true
+# LL content for `get5`
+COPY --chown=CSGOTourneyBase:root ./dist/content/get5 /app
 
 # UPDATE USERNAME & ensure permissions
-RUN usermod -l CSGOTourneyGet5 CSGOTourney &&`
-    chmod +x /app/ll-tests/*gamesvr-csgo-tourney-get5.sh
+RUN usermod -l CSGOTourneyGet5 CSGOTourneyBase &&`
+    chmod +x /app/ll-tests/*.sh
 
 USER CSGOTourneyGet5
+
+ONBUILD USER root

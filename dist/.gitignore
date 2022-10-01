@@ -1,0 +1,19 @@
+## Unneeded metamod
+### shared objects
+metamod/linux/addons/metamod/bin/*
+!metamod/linux/addons/metamod/bin/linux64
+!metamod/linux/addons/metamod/bin/metamod.2.csgo.so
+!metamod/linux/addons/metamod/bin/server_i486.so
+!metamod/linux/addons/metamod/bin/server.so
+
+## Unneeded Sourcemod
+### /bin
+sourcemod/linux/addons/sourcemod/bin/sourcemod.2.*.so
+!sourcemod/linux/addons/sourcemod/bin/sourcemod.2.csgo.so
+### /plugins
+sourcemod/linux/addons/sourcemod/plugins/disabled/*
+sourcemod/linux/addons/sourcemod/plugins/funcommands.smx
+sourcemod/linux/addons/sourcemod/plugins/funvotes.smx
+sourcemod/linux/addons/sourcemod/plugins/nextmap.smx
+sourcemod/linux/addons/sourcemod/plugins/reservedslots.smx
+sourcemod/linux/addons/sourcemod/plugins/sounds.smx

@@ -2,14 +2,17 @@
     "cSpell.words": [
         "csgo",
         "cvars",
+        "gamedata",
         "gamesvr",
-        "Laclede's",
-        "Laclede’s",
+        "laclede's",
+        "laclede’s",
         "lacledeslan",
         "maplist",
         "matchid",
         "metamod",
-        "sourcemod"
+        "sourcemod",
+        "vdfs",
+        "warmod"
     ],
     "files.exclude": {
         "**/.git": true,
@@ -17,13 +20,15 @@
         "**/Thumbs.db": true
     },
     "markdownlint.ignore": [
-        "LICENSE"
+        "**/LICENSE",
+        "dist/get5/*.md"
+
     ],
     "shellcheck.exclude": ["1091"],
     "[markdown]": {
         "editor.rulers": [140],
         "editor.unicodeHighlight.ambiguousCharacters": true,
         "editor.unicodeHighlight.invisibleCharacters": true,
-        "editor.wordWrap": "on"
+        "editor.wordWrap": "on",
     }
 }

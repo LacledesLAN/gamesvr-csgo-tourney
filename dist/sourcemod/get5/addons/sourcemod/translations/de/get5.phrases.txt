@@ -1,0 +1,223 @@
+"Phrases"
+{
+    "ReadyToVetoInfoMessage"
+    {
+        "de"            "Tippe {1} wenn dein Team bereit zum Voten ist."
+    }
+    "WaitingForCastersReadyInfoMessage"
+    {
+        "de"            "Warten auf die Caster, tippe {2} um zu beginnen."
+    }
+    "ReadyToRestoreBackupInfoMessage"
+    {
+        "de"            "Tippe {1} wenn dein Team bereit ist das Match Backup wieder einzuspielen."
+    }
+    "ReadyToKnifeInfoMessage"
+    {
+        "de"            "Tippe {1} wenn dein Team bereit ist für die Messer-Runde."
+    }
+    "ReadyToStartInfoMessage"
+    {
+        "de"            "Tippe {1} wenn dein Team bereit ist zu beginnen."
+    }
+    "WaitingForEnemySwapInfoMessage"
+    {
+        "de"            "{1} gewinnt die Seitenwahl. Wartend auf {2} oder {3}."
+    }
+    "WaitingForGOTVBrodcastEndingInfoMessage"
+    {
+        "de"            "Die Map wird gewechselt sobald der GOTV broadcast geendet hat."
+    }
+    "NoMatchSetupInfoMessage"
+    {
+        "de"			"Es ist kein Match aufgesetzt"
+    }
+    "YouAreNotAPlayerInfoMessage"
+    {
+        "de"            "Du bist kein Spieler von diesem Match"
+    }
+    "TeamIsFullInfoMessage"
+    {
+        "de"            "Dein Team ist voll"
+    }
+    "TeamForfeitInfoMessage"
+    {
+        "de"            "{1} schaffte es nicht fertig zu werden und gab auf."
+    }
+    "MinutesToForfeitMessage"
+    {
+        "de"            "{1} hat {2} Minuten um fertig zu werden oder sie werden aufgeben."
+    }
+    "SecondsToForfeitInfoMessage"
+    {
+        "de"            "{1} hat {2} Sekunden um fertig zu werden oder sie werden aufgeben."
+    }
+    "10SecondsToForfeitInfoMessage"
+    {
+        "de"            "{1} hat 10 Sekunden fertig zu werden oder sie geben auf."
+    }
+    "MaxPausesUsedInfoMessage"
+    {
+        "de"            "Dein Team hatte bereits die maximal zulässigen ({1}) Pausen."
+    }
+    "MaxPausesTimeUsedInfoMessage"
+    {
+        "de"            "Dein Team hat bereits die maximalen ({1}) der Pausezeit genutzt."
+    }
+    "MatchPausedByTeamMessage"
+    {
+        "de"            "{1} hat das Match pausiert."
+    }
+    "PauseRunoutInfoMessage"
+    {
+        "de"            "{1} hat keine Pausenzeit mehr, weiter gehts!"
+    }
+    "MatchUnpauseInfoMessage"
+    {
+        "de"            "{1} hat das Match fortgesetzt."
+    }
+    "WaitingForUnpauseInfoMessage"
+    {
+        "de"            "{1} möchte fortfahren, zum zuzustimmen muss {2} {3} schreiben."
+    }
+    "TeamFailToReadyMinPlayerCheck"
+    {
+        "de"            "Du musst mindestens {1} Spieler im Team haben um loszulegen."
+    }
+    "TeamReadyToVetoInfoMessage"
+    {
+        "de"            "{1} ist bereit für die Mapwahl."
+    }
+    "TeamReadyToRestoreBackupInfoMessage"
+    {
+        "de"            "{1} ist bereit ein Match Backup wieder einzuspielen."
+    }
+    "TeamReadyToKnifeInfoMessage"
+    {
+        "de"            "{1} ist bereit für die Messerrunde."
+    }
+    "TeamReadyToBeginInfoMessage"
+    {
+        "de"            "{1} ist bereit das Match zu beginnen."
+    }
+    "TeamNotReadyInfoMessage"
+    {
+        "de"            "{1} ist nicht mehr bereit."
+    }
+    "AdminForceReadyInfoMessage"
+    {
+        "de"            "Ein Admin hat das Match gestartet."
+    }
+    "AdminForceEndInfoMessage"
+    {
+        "de"            "Ein Admin hat das Match beendet."
+    }
+    "AdminForcePauseInfoMessage"
+    {
+        "de"            "Ein Admin hat das Match pausiert."
+    }
+    "AdminForceUnPauseInfoMessage"
+    {
+        "de"            "Ein Admin hat das Match fortgesetzt."
+    }
+    "TeamWantsToReloadCurrentRound"
+    {
+        "de"            "{1} möchte die letzte Runde wiederholen, {2} muss mit {3} bestätigen."
+    }
+    "TeamWinningSeriesInfoMessage"
+    {
+        "de"            "{1} gewinnt die Serie {2}-{3}."
+    }
+    "SeriesTiedInfoMessage"
+    {
+        "de"            "Die Serie ist unentschieden mit {1}-{2}."
+    }
+    "NextSeriesMapInfoMessage"
+    {
+        "de"            "Die nächste Map in der Serie ist {1}."
+    }
+    "TeamWonMatchInfoMessage"
+    {
+        "de"            "{1} hat das Match gewonnen."
+    }
+    "TeamWonSeriesInfoMessage"
+    {
+        "de"            "{1} hat die Serie gewonnen {2}-{3}."
+    }
+    "MatchFinishedInfoMessage"
+    {
+        "de"            "Das Match ist beendet"
+    }
+    "BackupLoadedInfoMessage"
+    {
+        "de"            "Backup {1} erfolgreich geladen."
+    }
+    "MatchBeginInSecondsInfoMessage"
+    {
+        "de"            "Das Match beginnt in {1} Sekunden."
+    }
+    "MatchIsLiveInfoMessage"
+    {
+        "de"            "Match ist {GREEN}LIVE"
+    }
+    "KnifeIn5SecInfoMessage"
+    {
+        "de"            "Die Messerrunde beginnt in 5 Sekunden."
+    }
+    "KnifeInfoMessage"
+    {
+        "de"            "Messern!"
+    }
+    "TeamDecidedToStayInfoMessage"
+    {
+        "de"            "{1} hat sich für den Stay entschieden."
+    }
+    "TeamDecidedToSwapInfoMessage"
+    {
+        "de"            "{1} hat sich für den Seitenwechsel entschieden."
+    }
+    "TeamLostTimeToDecideInfoMessage"
+    {
+        "de"            "{1} wird so bleiben da keine Entscheidung in der Zeit gefallen ist."
+    }
+    "ChangingMapInfoMessage"
+    {
+        "de"            "Ändern der Map in {1}..."
+    }
+    "MapDecidedInfoMessage"
+    {
+        "de"            "Die Maps wurden entschieden:"
+    }
+    "MapIsInfoMessage"
+    {
+        "de"            "Map {1}: {2}"
+    }
+    "TeamPickedMapInfoMessage"
+    {
+        "de"            "{1} wählte {2} als Map aus {3}."
+    }
+    "TeamSelectSideInfoMessage"
+    {
+        "de"            "{1} möchte als {2} starten {3}."
+    }
+    "TeamVetoedMapInfoMessage"
+    {
+        "de"            "{1} verbietet {2}."
+    }
+    "CaptainLeftOnVetoInfoMessage"
+    {
+        "de"            "Team Captian verließ das Match während der Veto Phase, pausieren..."
+    }
+    "ReadyToResumeVetoInfoMessage"
+    {
+        "de"            "Tippe {1} wenn ihr fertig seit mit dem veto fortzufahren."
+    }
+    "MatchConfigLoadedInfoMessage"
+    {
+        "de"            "Match Config geladen."
+    }
+    "MoveToCoachInfoMessage"
+    {
+        "de"            "Das Team ist voll die wurdest als Coach hinzugefügt."
+    }
+}
