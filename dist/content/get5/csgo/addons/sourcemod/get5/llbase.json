@@ -4,7 +4,7 @@
 	"min_players_to_ready": 5,
 	"min_spectators_to_ready": 0,
 	"skip_veto": true,
-	"veto_first": "team1",
+	"veto_first": "random",
 	"side_type": "always_knife",
 
 	"spectators": {
