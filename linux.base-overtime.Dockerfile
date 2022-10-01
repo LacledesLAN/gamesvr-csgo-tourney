@@ -1,6 +1,6 @@
 # escape=`
 
-FROM lacledeslan/gamesvr-csgo-tourney
+FROM lacledeslan/gamesvr-csgo-tourney:base
 
 ARG BUILDNODE="unspecified"
 ARG SOURCE_COMMIT
@@ -31,11 +31,11 @@ RUN FILE="/app/csgo/cfg/gamemode_competitive_server.cfg" &&`
         echo "mp_startmoney 10000" >> $FILE
 
 # UPDATE USERNAME & ensure permissions
-RUN usermod -l CSGOTourneyOvertime CSGOTourney &&`
+RUN usermod -l CSGOTourneyBaseOvertime CSGOTourneyBase &&`
     chmod +x /app/ll-tests/*.sh &&`
     chmod 774 /app/csgo/cfg/*.cfg
 
-USER CSGOTourneyOvertime
+USER CSGOTourneyBaseOvertime
 
 WORKDIR /app/
 

@@ -19,11 +19,11 @@ charity LAN-Parties. For third-parties we recommend using this repo only as a re
 
 | Tag             | Description                                                             | Purpose    |
 | --------------- | ----------------------------------------------------------------------- | ---------- |
-| `latest`        | Alias for the default LL tournament server, currently `base-get5`.      | PRODUCTION |
-| `hasty`         | Built from `latest`, configurations tweak for shorter play and testing. | TESTING    |
 | `base`          | LL tournament rules.                                                    | n/a        |
 | `base-overtime` | LL tournament rules, but the server starts in overtime mode.            | TESTING    |
 | `get5`          | Built from `base`, but includes metamod, sourcemod, and get5.           | PRODUCTION |
+| `latest`        | Alias for the default LL tournament server, currently `base-get5`.      | PRODUCTION |
+| `hasty`         | Built from `latest`, configurations tweak for shorter play and testing. | TESTING    |
 
 ## Third Party Content
 

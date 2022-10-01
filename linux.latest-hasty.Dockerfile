@@ -44,7 +44,7 @@ RUN FILE="/app/csgo/cfg/gamemode_competitive_server.cfg" &&`
         echo "sv_cheats 1" >> $FILE
 
 # UPDATE USERNAME & ensure permissions
-RUN usermod -l CSGOTourneyHasty CSGOTourney &&`
+RUN usermod -l CSGOTourneyGet5Hasty CSGOTourneyGet5 &&`
     chmod +x /app/ll-tests/*.sh &&`
     chmod 774 /app/csgo/cfg/*.cfg
 

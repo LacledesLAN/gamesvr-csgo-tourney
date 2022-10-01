@@ -27,7 +27,7 @@ RUN usermod -l CSGOTourneyBase CSGO &&`
     mkdir -p /app/csgo/logs &&`
     chmod 774 /app/csgo/logs
 
-USER CSGOTourney
+USER CSGOTourneyBase
 
 WORKDIR /app/
 
