@@ -1,6 +1,5 @@
 {
-	"matchid": "example_match",
-	"num_maps": 1,
+	"num_maps": 3,
 	"players_per_team": 5,
 	"min_players_to_ready": 1,
 	"min_spectators_to_ready": 0,
@@ -9,9 +8,7 @@
 	"side_type": "always_knife",
 
 	"spectators": {
-		"players":
-		[
-		]
+		"players": []
 	},
 
 	"maplist":
@@ -26,18 +23,12 @@
 	],
 
 	"team1": {
-		"name": "TEAM-BEAN",
-		"tag": "TEAM-BEAN",
-		"flag": "",
-		"logo": "",
+		"name": "",
 		"players": {}
 	},
 
 	"team2": {
-		"name": "TEAM-PL",
-		"tag": "TEAM-PL",
-		"flag": "",
-		"logo": "",
+		"name": "",
 		"players": {}
 	},
 

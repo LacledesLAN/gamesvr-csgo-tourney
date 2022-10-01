@@ -1,15 +1,14 @@
 {
-    "matchid": "example_match",
-    "num_maps": 1,
-    "players_per_team": 5,
-    "min_players_to_ready": 1,
-    "min_spectators_to_ready": 0,
-    "skip_veto": false,
-    "veto_first": "random",
-    "side_type": "always_knife",
+	"num_maps": 3,
+	"players_per_team": 5,
+	"min_players_to_ready": 1,
+	"min_spectators_to_ready": 0,
+	"skip_veto": false,
+	"veto_first": "random",
+	"side_type": "always_knife",
 
 	"spectators": {
-        "players": [ ]
+		"players": []
 	},
 
 	"maplist":
@@ -23,25 +22,14 @@
 		"de_dust2"
 	],
 
-
 	"team1": {
-		"name": "TEAM-BEAN",
-		"tag": "TEAM-BEAN",
-		"flag": "",
-		"logo": "",
-		"players":
-		{
-			}
+		"name": "",
+		"players": {}
 	},
 
 	"team2": {
-		"name": "TEAM-PL",
-		"tag": "TEAM-PL",
-		"flag": "",
-		"logo": "",
-		"players":
-		{
-		}
+		"name": "",
+		"players": {}
 	},
 
 	"cvars": {
