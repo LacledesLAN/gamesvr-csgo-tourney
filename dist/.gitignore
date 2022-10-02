@@ -6,7 +6,7 @@ metamod/linux/addons/metamod/bin/*
 !metamod/linux/addons/metamod/bin/server_i486.so
 !metamod/linux/addons/metamod/bin/server.so
 
-## Unneeded Sourcemod
+## Unneeded sourcemod/linux
 ### /bin
 sourcemod/linux/addons/sourcemod/bin/sourcemod.2.*.so
 !sourcemod/linux/addons/sourcemod/bin/sourcemod.2.csgo.so
@@ -22,3 +22,6 @@ sourcemod/linux/addons/sourcemod/plugins/reservedslots.smx
 sourcemod/linux/addons/sourcemod/plugins/sounds.smx
 ### runable configs
 sourcemod/linux/cfg/sourcemod/sourcemod.cfg
+
+## Unneeded sourcemod/get5
+sourcemod/get5/cfg/get5/live.cfg

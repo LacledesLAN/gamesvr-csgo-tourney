@@ -2,9 +2,7 @@
 # KEEP UP TO DATE ALONG WITH .gitignore!
 ###################################################################################################
 
-# Project Specific
-
-## Unneeded metamod
+## Unneeded sourcemod/linux
 ### shared objects
 dist/metamod/linux/addons/metamod/bin/*
 !dist/metamod/linux/addons/metamod/bin/linux64
@@ -28,6 +26,9 @@ dist/sourcemod/linux/addons/sourcemod/plugins/reservedslots.smx
 dist/sourcemod/linux/addons/sourcemod/plugins/sounds.smx
 ### runable configs
 dist/sourcemod/linux/cfg/sourcemod/sourcemod.cfg
+
+## Unneeded sourcemod/get5
+dist/sourcemod/get5/cfg/get5/live.cfg
 
 ###################################################################################################
 # Unique to .dockerignore
