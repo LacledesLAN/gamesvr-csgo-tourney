@@ -10,7 +10,8 @@ In the interests of fostering a collaborative environment we have a few ground r
 * Be careful with your words. Remember that sexist, racist, and other exclusionary jokes can potentially be offensive to those around you,
   even if you did not mean them to be. Do not insult or put down other participants. Behave professionally.
 * Be considerate. It is the responsibility of project maintainers to focus on Laclede’s LAN goals. Decisions may be made that reject your
-  code or feature requests that go against our mission. At any time you may fork the projects in accordance with the applicable project license(s).
+  code or feature requests that go against our mission. At any time you may fork the projects in accordance with the applicable project
+  license(s).
 
 When we disagree, we try to understand why. Disagreements, both social and technical, happen all the time and Laclede’s LAN is no exception.
 It is important that we resolve disagreements and differing views constructively.
