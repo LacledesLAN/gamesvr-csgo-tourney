@@ -12,15 +12,7 @@
 	},
 
 	"maplist":
-	[
-		"ar_poolstay",
-		"de_lltest",
-		"de_orange",
-		"de_rats_1337",
-		"de_tinyorange",
-		"fy_pool_day",
-		"fy_hangemhigh"
-	],
+	[],
 
 	"team1": {
 		"name": "",

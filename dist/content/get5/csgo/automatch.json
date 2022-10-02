@@ -14,13 +14,16 @@
 
 	"maplist":
 	[
-		"de_inferno",
-		"de_nuke",
-		"de_vertigo",
-		"de_mirage",
-		"de_overpass",
-		"de_ancient",
-		"de_dust2"
+		"koth_lolcano",
+		"ctf_2fort",
+		"de_dustbowl",
+		"ctf_facingworlds",
+		"bloodgulch",
+		"e1m1",
+		"facility",
+		"final_destination",
+		"inkblot_art_academy",
+		"hyrule_water_temple"
 	],
 
 	"team1": {
