@@ -7,7 +7,7 @@ docker run -it --rm lacledeslan/gamesvr-csgo-tourney:base ./ll-tests/gamesvr-csg
 docker push lacledeslan/gamesvr-csgo-tourney:base
 
 echo -e '\n\033[1m[Build tourney:base-overtime]\033[0m'
-docker build . -f linux.base.Dockerfile --rm -t lacledeslan/gamesvr-csgo-tourney:base-overtime --pull --build-arg BUILDNODE="$(cat /proc/sys/kernel/hostname)";
+docker build . -f linux.base-overtime.Dockerfile --rm -t lacledeslan/gamesvr-csgo-tourney:base-overtime --pull --build-arg BUILDNODE="$(cat /proc/sys/kernel/hostname)";
 docker push lacledeslan/gamesvr-csgo-tourney:base-overtime
 
 echo -e '\n\033[1m[Build tourney:get5]\033[0m'
