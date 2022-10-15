@@ -20,3 +20,6 @@ LICENSE             text
 *.so                binary
 *.smx               binary
 *.sp                binary
+
+## Project Specific
+dist/content/get5/get5-cli*     binary

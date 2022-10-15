@@ -7,21 +7,16 @@
 	"veto_first": "random",
 	"side_type": "always_knife",
 
-	"spectators": {
-		"players": []
-	},
+	"spectators": {},
 
-	"maplist":
-	[],
+	"maplist":[],
 
 	"team1": {
-		"name": "",
-		"players": {}
+		"name": "mp-team1"
 	},
 
 	"team2": {
-		"name": "",
-		"players": {}
+		"name": "mp-team2"
 	},
 
 	"cvars": {}

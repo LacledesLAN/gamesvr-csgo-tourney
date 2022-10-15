@@ -19,12 +19,18 @@
             "label": "Get5 - Build & Test",
             "type": "shell",
             "command": "docker run --rm lacledeslan/gamesvr-csgo-tourney:get5 ./ll-tests/gamesvr-csgo-tourney-get5.sh;",
-            "dependsOn": "Get5 - Build Docker Image",
+            "dependsOn": ["Get5 - Build Docker Image"],
             "group": "build",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
             },
+            "problemMatcher": []
+        },
+        {
+            "label": "Get5 - Build Latest `get5-cli` executable",
+            "type": "shell",
+            "command": "docker run -v ${workspaceFolder}/dist/content/get5/:/out --rm golang:latest /bin/bash -c 'git clone https://github.com/LacledesLAN/get5-cli /source && cd /source && go build -o /out/get5-cli /source/cmd/build-config/main.go'",
             "problemMatcher": []
         },
         {
