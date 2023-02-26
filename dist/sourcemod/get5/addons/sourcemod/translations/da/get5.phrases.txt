@@ -1,8 +1,8 @@
 "Phrases"
 {
-    "ReadyToVetoInfoMessage"
+    "ReadyForMapSelectionInfoMessage"
     {
-        "da"            "Skriv {1} når dit hold er klar til at veto."
+        "da"            "Skriv {1}, når dit hold er klar til map-valg."
     }
     "WaitingForCastersReadyInfoMessage"
     {
@@ -26,7 +26,11 @@
     }
     "YouAreReadyAuto"
     {
-        "da"            "NOTE: Du er blevet markeret som klar grundet spilaktivitet. Skriv {1} hvis du ikke er klar."
+        "da"            "NOTE: Du er blevet markeret som klar grundet spilaktivitet."
+    }
+    "TypeUnreadyIfNotReady"
+    {
+        "da"            "Skriv {1} hvis du ikke er klar."
     }
     "YouAreNotReady"
     {
@@ -36,13 +40,13 @@
     {
         "da"            "{1} vandt knife-runden. Venter på, at de skriver {2} eller {3}."
     }
-    "WaitingForGOTVBrodcastEndingInfoMessage"
+    "WaitingForGOTVBroadcastEnding"
     {
-        "da"            "Dette map vil skifte når nuværende GOTV broadcast er slut."
+        "da"            "Mappet skifter, når GOTV har vist kampen."
     }
-    "WaitingForGOTVVetoInfoMessage"
+    "WaitingForGOTVMapSelection"
     {
-        "da"            "Dette map vil skifte når nuværende GOTV broadcast har fået map vetos vist."
+        "da"            "Mappet skifter, når GOTV har vist map-valg."
     }
     "NoMatchSetupInfoMessage"
     {
@@ -60,17 +64,13 @@
     {
         "da"            "{1} var ikke i stand til at gøre sig klar i tide og har opgivet."
     }
-    "MinutesToForfeitMessage"
+    "TeamMustBeReadyOrForfeit"
     {
-        "da"            "{1} har {2} minutter til at gøre sig klar før de opgiver kampen."
+        "da"            "{1} opgiver kampen, hvis de ikke er klar inden {2}."
     }
-    "SecondsToForfeitInfoMessage"
+    "TeamsMustBeReadyOrTie"
     {
-        "da"            "{1} har {2} sekunder til at gøre sig klar før de opgiver kampen."
-    }
-    "10SecondsToForfeitInfoMessage"
-    {
-        "da"            "{1} har 10 sekunder til at gøre sig klar før de opgiver kampen."
+        "da"            "Kampen ender uafgjort, hvis holdene ikke er klar inden {1}."
     }
     "MaxPausesUsedInfoMessage"
     {
@@ -130,7 +130,11 @@
     }
     "PausingTeamCannotUnpauseUntilFreezeTime"
     {
-        "da"            "Du kan ikke afbryde din pause, før den er startet. Pauseanmodninger kan ikke annulleres."
+        "da"            "Du kan ikke afbryde jeres pause, før den er startet."
+    }
+    "PauseRequestCanceled"
+    {
+        "da"            "{1} har annulleret deres anmodning om pause."
     }
     "PauseRunoutInfoMessage"
     {
@@ -148,9 +152,9 @@
     {
         "da"            "{1} har ikke flere tekniske pauser. Brug taktisk pause i stedet."
     }
-    "TechPausePausesRemaining"
+    "TechPauseAutomaticallyStarted"
     {
-        "da"            "Tekniske pauser tilbage for {1}: {2}"
+        "da"            "En teknisk pause blev automatisk startet for {1}."
     }
     "MatchUnpauseInfoMessage"
     {
@@ -160,37 +164,45 @@
     {
         "da"            "{1} vil gerne fortsætte kampen. Afventer {3} fra {2}."
     }
-    "PausesLeftInfoMessage"
+    "PrereleaseVersionWarning"
     {
-        "da"            "Taktiske pauser tilbage for {1}: {2}"
+        "da"        "Serveren kører en uofficiel version af Get5 ({1}) designet til test og udvikling. Denne besked kan fjernes via {2}."
+    }
+    "NewVersionAvailable"
+    {
+        "da"        "En nyere version af Get5 er tilgængelig. Opdatering kan findes på {1}."
     }
     "TeamFailToReadyMinPlayerCheck"
     {
         "da"            "Der skal være minimum {1} spiller(e) på serveren for at gøre klar."
     }
-    "TeamReadyToVetoInfoMessage"
+    "TeamIsReadyForMapSelection"
     {
-        "da"            "{1} er klar til at veto."
+        "da"            "{1} er klar til map-valg."
     }
-    "TeamReadyToRestoreBackupInfoMessage"
+    "TeamIsReadyToRestoreBackup"
     {
-        "da"            "{1} er klar til at genoprette match fra backup."
+        "da"            "{1} er klar til at genoprette kampen fra backup."
     }
-    "TeamReadyToKnifeInfoMessage"
+    "TeamIsReadyToKnife"
     {
         "da"            "{1} er klar til at knife om side."
     }
-    "TeamReadyToBeginInfoMessage"
+    "TeamIsReadyToBegin"
     {
         "da"            "{1} er klar til at begynde kampen."
     }
-    "TeamNotReadyInfoMessage"
+    "TeamIsNoLongerReady"
     {
         "da"            "{1} er ikke længere klar."
     }
     "ForceReadyInfoMessage"
     {
-        "da"            "Du kan skrive {1} for tvinge dit hold klar, hvis der er mindre end {2} spillere."
+        "da"            "Du kan skrive {1} for tvinge dit hold klar."
+    }
+    "ForceReadyDisabled"
+    {
+        "da"            "{1}-kommandoen er deaktiveret, men kan aktiveres via {2}."
     }
     "TeammateForceReadied"
     {
@@ -252,9 +264,21 @@
     {
         "da"            "Stop-kommandoen er ikke aktiveret."
     }
+    "StopCommandOnlyAfterRoundStart"
+    {
+        "da"            "Anmodning om at genstarte runden kan ikke gives før runden er startet."
+    }
     "StopCommandVotingReset"
     {
         "da"            "Anmodningen fra {1} om at stoppe spillet blev annulleret, da runden sluttede."
+    }
+    "StopCommandRequiresNoDamage"
+    {
+        "da"            "Anmodning om at genstarte runden kan ikke gives, efter en spiller har skadet en anden spiller fra det modsatte hold."
+    }
+    "StopCommandTimeLimitExceeded"
+    {
+        "da"            "Anmodning om at genstarte runden skal gives inden {1} fra rundens start."
     }
     "BackupLoadedInfoMessage"
     {
@@ -300,29 +324,37 @@
     {
         "da"            "Map {1}: {2}"
     }
-    "TeamPickedMapInfoMessage"
+    "TeamPickedMap"
     {
         "da"            "{1} valgte {2} som deres {3}. map."
     }
-    "TeamSelectSideInfoMessage"
+    "TeamSelectedSide"
     {
         "da"            "{1} har valgt at start som {2} på {3}."
     }
-    "TeamVetoedMapInfoMessage"
+    "TeamBannedMap"
     {
-        "da"            "{1} vetoed {2}."
+        "da"            "{1} bannede {2}."
     }
-    "CaptainLeftOnVetoInfoMessage"
+    "CaptainLeftDuringMapSelection"
     {
-        "da"            "En kaptajn forlod kampen under veto, pauser vetoen."
+        "da"            "En holdkaptajn forlod kampen under map-valg. Map-valg er på pause."
     }
-    "ReadyToResumeVetoInfoMessage"
+    "ReadyToResumeMapSelection"
     {
-        "da"            "Skriv {1}, når du er klar til at genoptage veto."
+        "da"            "Skriv {1}, når du er klar til at genoptage map-valg."
     }
     "MatchConfigLoadedInfoMessage"
     {
         "da"            "Indlæste kampopsætning."
+    }
+    "ExitCoachSlotHelp"
+    {
+        "da"            "Skriv {1} for at forlade trænerpositionen."
+    }
+    "EnterCoachSlotHelp"
+    {
+        "da"            "Skriv {1} for at blive træner for dit hold."
     }
     "MoveToCoachInfoMessage"
     {
@@ -356,48 +388,116 @@
     {
         "da"            "[IKKE KLAR]"
     }
-    "MapVetoPickMenuText"
+    "MapSelectionTeamChatOnly"
     {
-        "da"        "Vælg et map at spille:"
+        "da"        "Du kan kun skrive i dit eget holds chatkanal under map-valg."
     }
-    "MapVetoPickConfirmMenuText"
+    "MapSelectionInvalidMap"
     {
-        "da"        "Bekræft, at du vil spille {1}:"
+        "da"        "{1} er ikke et gyldigt map."
     }
-    "MapVetoBanMenuText"
+    "MapSelectionPickMapHelp"
     {
-        "da"        "Vælg et map at VETO:"
+        "da"        "Brug {1} <map> til at vælge et map."
     }
-    "MapVetoBanConfirmMenuText"
+    "MapSelectionBanMapHelp"
     {
-        "da"        "Bekræft, at du vil VETO {1}:"
+        "da"        "Brug {1} <map> til at banne et map."
     }
-    "MapVetoSidePickMenuText"
+    "MapSelectionPickSideHelp"
     {
-        "da"        "Vælg en side på {1}"
+        "da"        "Brug {1} eller {2} til at vælge en side."
     }
-    "MapVetoSidePickConfirmMenuText"
+    "MapSelectionAnnounceCaptains"
     {
-        "da"        "Bekræft, at du vil starte {1}:"
+        "da"        "Holdkaptajn for {1}: {2}"
     }
-    "ConfirmPositiveOptionText"
+    "MapSelectionBan"
     {
-        "da"        "Ja"
+        "da"        "BANNE"
     }
-    "ConfirmNegativeOptionText"
+    "MapSelectionPick"
     {
-        "da"        "Nej"
+        "da"        "VÆLGE"
     }
-    "VetoCountdown"
+    "MapSelectionTurnToPick"
     {
-        "da"        "Veto begynder om {1} sekunder."
+        "da"        "{1} skal {2} et map at spille som map nr. {3}."
     }
-    "NewVersionAvailable"
+    "MapSelectionTurnToBan"
     {
-        "da"        "En nyere version af Get5 er tilgængelig. Opdatering kan findes på {1}."
+        "da"        "{1} skal {2} et map."
     }
-    "PrereleaseVersionWarning"
+    "MapSelectionPickSide"
     {
-        "da"        "Serveren kører en uofficiel version af Get5 ({1}) designet til test og udvikling. Denne besked kan fjernes via {2}."
+        "da"        "{1} skal vælge en startside på {2}."
+    }
+    "MapSelectionRemainingMaps"
+    {
+        "da"        "Tilbageværende maps:"
+    }
+    "MapSelectionCountdown"
+    {
+        "da"        "Map-valg begynder om {1}..."
+    }
+    "SurrenderCommandNotEnabled"
+    {
+        "da"        "Kommandoen til at overgive sig er ikke aktiveret."
+    }
+    "SurrenderMinimumRoundDeficit"
+    {
+        "da"        "I skal være bagud med mindst {1} runde(r) for at kunne overgive jer."
+    }
+    "SurrenderInitiated"
+    {
+        "da"        "{1} har startet en afstemning om overgivelse. Jeres hold skal opnå {2} stemmer inden {3} sekunder."
+    }
+    "SurrenderVoteStatus"
+    {
+        "da"        "{1} af {2} påkrævede stemmer for overgivelse er afgivet."
+    }
+    "SurrenderSuccessful"
+    {
+        "da"        "{1} har overgivet sig."
+    }
+    "SurrenderVoteFailed"
+    {
+        "da"        "Der var ikke nok spillere fra jeres hold, der stemte for overgivelse."
+    }
+    "SurrenderOnCooldown"
+    {
+        "da"        "I skal vente mindst {1}, før I kan stemme om overgivelse igen."
+    }
+    "WinByForfeitAvailable"
+    {
+        "da"        "{1} har forladt serveren. {2} kan nu skrive {3} for at påbegynde nedtælling til sejr via opgivelse, så længe deres hold er fyldt."
+    }
+    "WinByForfeitRequiresFullTeam"
+    {
+        "da"        "I skal have et fyldt hold for at kunne anmode om eller annullere sejr via opgivelse."
+    }
+    "WinByForfeitAlreadyRequested"
+    {
+        "da"        "En nedtælling til sejr via opgivelse er allerede igang."
+    }
+    "WinByForfeitCountdownStarted"
+    {
+        "da"        "{1} vinder om {2} med mindre en spiller fra {3} vender tilbage til serveren. Dette kan annulleres via {4}."
+    }
+    "WinByForfeitCountdownCanceled"
+    {
+        "da"        "Anmodningen fra {1} om at vinde via opgivelse er annulleret."
+    }
+    "TeamForfeited"
+    {
+        "da"        "{1} har opgivet kampen."
+    }
+    "AllPlayersLeftTieCountdown"
+    {
+        "da"        "Begge hold har forladt serveren. Mindst én spiller fra hvert hold skal vende tilbage inden {1} for at undgå at kampen afsluttes uafgjort."
+    }
+    "TieCountdownCanceled"
+    {
+        "da"        "Nedtællingen til ufafgjort er annulleret, da begge hold nu har spillere."
     }
 }

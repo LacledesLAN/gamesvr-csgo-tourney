@@ -1,9 +1,9 @@
 "Phrases"
 {
-    "ReadyToVetoInfoMessage"
+    "ReadyForMapSelectionInfoMessage"
     {
         "#format"       "{1:s}"
-        "en"            "Type {1} when your team is ready to veto."
+        "en"            "Type {1} when your team is ready for map selection."
     }
     "WaitingForCastersReadyInfoMessage"
     {
@@ -31,8 +31,12 @@
     }
     "YouAreReadyAuto"
     {
+        "en"            "NOTE: You have been marked as ready due to game activity."
+    }
+    "TypeUnreadyIfNotReady"
+    {
         "#format"       "{1:s}"
-        "en"            "NOTE: You have been marked as ready due to game activity. Type {1} if you are not ready."
+        "en"            "Type {1} if you are not ready."
     }
     "YouAreNotReady"
     {
@@ -43,13 +47,13 @@
         "#format"       "{1:s},{2:s},{3:s}"
         "en"            "{1} won the knife round. Waiting for them to type {2} or {3}."
     }
-    "WaitingForGOTVBrodcastEndingInfoMessage"
+    "WaitingForGOTVBroadcastEnding"
     {
-        "en"            "The map will change once the GOTV broadcast has ended."
+        "en"            "The map will change once GOTV has finished broadcasting."
     }
-    "WaitingForGOTVVetoInfoMessage"
+    "WaitingForGOTVMapSelection"
     {
-        "en"            "The map will change once the GOTV broadcast has displayed the map vetos."
+        "en"            "The map will change once GOTV has broadcast the map selection."
     }
     "NoMatchSetupInfoMessage"
     {
@@ -68,20 +72,15 @@
         "#format"       "{1:s}"
         "en"            "{1} failed to ready up in time and has forfeit."
     }
-    "MinutesToForfeitMessage"
+    "TeamMustBeReadyOrForfeit"
     {
-        "#format"       "{1:s},{2:d}"
-        "en"            "{1} has {2} minutes left to ready up or they will forfeit the match."
+        "#format"       "{1:s},{2:s}"
+        "en"            "{1} must be ready within {2} or they will forfeit the match."
     }
-    "SecondsToForfeitInfoMessage"
-    {
-        "#format"       "{1:s},{2:d}"
-        "en"            "{1} has {2} seconds left to ready up or they will forfeit the match."
-    }
-    "10SecondsToForfeitInfoMessage"
+    "TeamsMustBeReadyOrTie"
     {
         "#format"       "{1:s}"
-        "en"            "{1} has 10 seconds to ready up or forfeit the match."
+        "en"            "Teams must be ready within {1} or the match will end in a tie."
     }
     "MaxPausesUsedInfoMessage"
     {
@@ -96,12 +95,12 @@
     "MatchPausedByTeamMessage"
     {
         "#format"       "{1:s}"
-        "en"            "{1} has called for a tactical pause."
+        "en"            "{1} called for a tactical pause."
     }
     "MatchTechPausedByTeamMessage"
     {
         "#format"       "{1:s}"
-        "en"            "{1} has called for a technical pause."
+        "en"            "{1} called for a technical pause."
     }
     "PausesNotEnabled"
     {
@@ -133,7 +132,7 @@
     }
     "PausedByAdministrator"
     {
-        "en"            "An administrator has paused the match."
+        "en"            "An administrator paused the match."
     }
     "PausedForBackup"
     {
@@ -141,11 +140,16 @@
     }
     "UserCannotUnpauseAdmin"
     {
-        "en"            "As an admin has called for this pause, it must also be unpaused by an admin."
+        "en"            "As an admin started this pause, it must also be unpaused by an admin."
+    }
+    "PauseRequestCanceled"
+    {
+        "#format"       "{1:s}"
+        "en"            "{1} canceled their request for a pause."
     }
     "PausingTeamCannotUnpauseUntilFreezeTime"
     {
-        "en"            "You cannot unpause before your pause has started. Pause requests cannot be canceled."
+        "en"            "You cannot unpause before your pause has started."
     }
     "PauseRunoutInfoMessage"
     {
@@ -167,10 +171,10 @@
         "#format"       "{1:s}"
         "en"            "{1} has no more tech pauses. Please use tactical pauses."
     }
-    "TechPausePausesRemaining"
+    "TechPauseAutomaticallyStarted"
     {
-        "#format"       "{1:s},{2:d}"
-        "en"            "Technical pauses remaining for {1}: {2}"
+        "#format"       "{1:s}"
+        "en"            "A technical pause was automatically started for {1}."
     }
     "MatchUnpauseInfoMessage"
     {
@@ -181,11 +185,6 @@
     {
         "#format"       "{1:s},{2:s},{3:s}"
         "en"            "{1} wants to unpause, waiting for {2} to type {3}."
-    }
-    "PausesLeftInfoMessage"
-    {
-        "#format"       "{1:s},{2:d}"
-        "en"            "Tactical pauses remaining for {1}: {2}"
     }
     "PrereleaseVersionWarning"
     {
@@ -202,35 +201,40 @@
         "#format"       "{1:d}"
         "en"            "You must have at least {1} player(s) on the server to ready up."
     }
-    "TeamReadyToVetoInfoMessage"
+    "TeamIsReadyForMapSelection"
     {
         "#format"       "{1:s}"
-        "en"            "{1} is ready to veto."
+        "en"            "{1} is ready for map selection."
     }
-    "TeamReadyToRestoreBackupInfoMessage"
+    "TeamIsReadyToRestoreBackup"
     {
         "#format"       "{1:s}"
         "en"            "{1} is ready to restore the match backup."
     }
-    "TeamReadyToKnifeInfoMessage"
+    "TeamIsReadyToKnife"
     {
         "#format"       "{1:s}"
         "en"            "{1} is ready to knife for sides."
     }
-    "TeamReadyToBeginInfoMessage"
+    "TeamIsReadyToBegin"
     {
         "#format"       "{1:s}"
         "en"            "{1} is ready to begin the match."
     }
-    "TeamNotReadyInfoMessage"
+    "TeamIsNoLongerReady"
     {
         "#format"       "{1:s}"
         "en"            "{1} is no longer ready."
     }
     "ForceReadyInfoMessage"
     {
+        "#format"       "{1:s}"
+        "en"            "You may type {1} to force-ready your team."
+    }
+    "ForceReadyDisabled"
+    {
         "#format"       "{1:s},{2:s}"
-        "en"            "You may type {1} to force-ready your team if you have less than {2} players."
+        "en"            "The {1} command is disabled, but can be enabled with {2}."
     }
     "TeammateForceReadied"
     {
@@ -301,10 +305,23 @@
     {
         "en"            "The stop command is not enabled."
     }
+    "StopCommandOnlyAfterRoundStart"
+    {
+        "en"            "A request to restart the round cannot be given before the round has started."
+    }
     "StopCommandVotingReset"
     {
         "#format"       "{1:s}"
         "en"            "The request by {1} to stop the game was canceled as the round ended."
+    }
+    "StopCommandRequiresNoDamage"
+    {
+        "en"            "A request to restart the round cannot be given once a player has damaged any opposing player."
+    }
+    "StopCommandTimeLimitExceeded"
+    {
+        "#format"       "{1:s}"
+        "en"            "A request to restart the round must be given within {1} after the round has started."
     }
     "BackupLoadedInfoMessage"
     {
@@ -331,12 +348,12 @@
     "TeamDecidedToStayInfoMessage"
     {
         "#format"       "{1:s}"
-        "en"            "{1} has decided to stay."
+        "en"            "{1} decided to stay."
     }
     "TeamDecidedToSwapInfoMessage"
     {
         "#format"       "{1:s}"
-        "en"            "{1} has decided to swap."
+        "en"            "{1} decided to swap."
     }
     "TeamLostTimeToDecideInfoMessage"
     {
@@ -357,33 +374,43 @@
         "#format"       "{1:d},{2:s}"
         "en"            "Map {1}: {2}"
     }
-    "TeamPickedMapInfoMessage"
+    "TeamPickedMap"
     {
         "#format"       "{1:s},{2:s},{3:d}"
         "en"            "{1} picked {2} as map {3}."
     }
-    "TeamSelectSideInfoMessage"
+    "TeamSelectedSide"
     {
         "#format"       "{1:s},{2:s},{3:s}"
-        "en"            "{1} has selected to start on {2} on {3}."
+        "en"            "{1} elected to start as {2} on {3}."
     }
-    "TeamVetoedMapInfoMessage"
+    "TeamBannedMap"
     {
         "#format"       "{1:s},{2:s}"
-        "en"            "{1} vetoed {2}."
+        "en"            "{1} banned {2}."
     }
-    "CaptainLeftOnVetoInfoMessage"
+    "CaptainLeftDuringMapSelection"
     {
-        "en"            "A captain left during the veto, pausing the veto."
+        "en"            "A team captain left during map selection. Map selection is paused."
     }
-    "ReadyToResumeVetoInfoMessage"
+    "ReadyToResumeMapSelection"
     {
         "#format"       "{1:s}"
-        "en"            "Type {1} when you are ready to resume the veto."
+        "en"            "Type {1} when you are ready to resume map selection."
     }
     "MatchConfigLoadedInfoMessage"
     {
         "en"            "Loaded match config."
+    }
+    "ExitCoachSlotHelp"
+    {
+        "#format"       "{1:s}"
+        "en"            "Type {1} to exit the coach slot."
+    }
+    "EnterCoachSlotHelp"
+    {
+        "#format"       "{1:s}"
+        "en"            "Type {1} to become a coach for your team."
     }
     "MoveToCoachInfoMessage"
     {
@@ -420,45 +447,135 @@
     {
         "en"            "[NOT READY]"
     }
-    "MapVetoPickMenuText"
+    "MapSelectionTeamChatOnly"
     {
-        "en"        "Select a map to PLAY:"
+        "en"        "You can only type in team chat during map selection."
     }
-    "MapVetoPickConfirmMenuText"
-    {
-        "#format"       "{1:s}"
-        "en"        "Confirm you want to PLAY {1}:"
-    }
-    "MapVetoBanMenuText"
-    {
-        "en"        "Select a map to VETO:"
-    }
-    "MapVetoBanConfirmMenuText"
-    {
-        "#format"       "{1:s}"
-        "en"        "Confirm you want to VETO {1}:"
-    }
-    "MapVetoSidePickMenuText"
-    {
-        "#format"       "{1:s}"
-        "en"        "Select a side for {1}:"
-    }
-    "MapVetoSidePickConfirmMenuText"
-    {
-        "#format"       "{1:s}"
-        "en"        "Confirm you want to start {1}:"
-    }
-    "ConfirmPositiveOptionText"
-    {
-        "en"        "Yes"
-    }
-    "ConfirmNegativeOptionText"
-    {
-        "en"        "No"
-    }
-    "VetoCountdown"
+    "MapSelectionInvalidMap"
     {
         "#format"   "{1:s}"
-        "en"        "Veto commencing in {1} seconds."
+        "en"        "{1} is not a valid map."
+    }
+    "MapSelectionPickMapHelp"
+    {
+        "#format"   "{1:s}"
+        "en"        "Use {1} <map> to pick a map."
+    }
+    "MapSelectionBanMapHelp"
+    {
+        "#format"   "{1:s}"
+        "en"        "Use {1} <map> to ban a map."
+    }
+    "MapSelectionPickSideHelp"
+    {
+        "#format"   "{1:s},{2:s}"
+        "en"        "Use {1} or {2} to pick a side."
+    }
+    "MapSelectionAnnounceCaptains"
+    {
+        "#format"   "{1:s},{2:N}"
+        "en"        "Captain for {1}: {2}"
+    }
+    "MapSelectionBan"
+    {
+        "en"        "BAN"
+    }
+    "MapSelectionPick"
+    {
+        "en"        "PICK"
+    }
+    "MapSelectionTurnToPick"
+    {
+        "#format"   "{1:s},{2:s},{3:d}"
+        "en"        "{1} must now {2} a map to play as map {3}."
+    }
+    "MapSelectionTurnToBan"
+    {
+        "#format"   "{1:s},{2:s}"
+        "en"        "{1} must now {2} a map."
+    }
+    "MapSelectionPickSide"
+    {
+        "#format"   "{1:s},{2:s}"
+        "en"        "{1} must now pick a side to play on {2}."
+    }
+    "MapSelectionRemainingMaps"
+    {
+        "en"        "Remaining maps:"
+    }
+    "MapSelectionCountdown"
+    {
+        "#format"   "{1:s}"
+        "en"        "Map selection commencing in {1}..."
+    }
+    "SurrenderCommandNotEnabled"
+    {
+        "en"        "The surrender command is not enabled."
+    }
+    "SurrenderMinimumRoundDeficit"
+    {
+        "#format"   "{1:d}"
+        "en"        "You must be behind by at least {1} round(s) in order to surrender."
+    }
+    "SurrenderInitiated"
+    {
+        "#format"   "{1:s},{2:d},{3:d}"
+        "en"        "A vote to surrender was initiated by {1}. Your team must reach {2} votes within {3} seconds."
+    }
+    "SurrenderVoteStatus"
+    {
+        "#format"   "{1:d},{2:d}"
+        "en"        "{1} of {2} required surrender votes have been cast."
+    }
+    "SurrenderSuccessful"
+    {
+        "#format"   "{1:s}"
+        "en"        "{1} surrendered."
+    }
+    "SurrenderVoteFailed"
+    {
+        "en"        "Not enough players on your team voted to surrender."
+    }
+    "SurrenderOnCooldown"
+    {
+        "#format"   "{1:s}"
+        "en"        "You must wait {1} to initiate a new vote to surrender."
+    }
+    "WinByForfeitAvailable"
+    {
+        "#format"   "{1:s},{2:s},{3:s}"
+        "en"        "{1} left the server. {2} can now type {3} to initiate a countdown to win as long as their team is full."
+    }
+    "WinByForfeitRequiresFullTeam"
+    {
+        "en"        "You must have a full team in order to request or cancel a win by forfeit."
+    }
+    "WinByForfeitAlreadyRequested"
+    {
+        "en"        "A request to win by forfeit is already pending."
+    }
+    "WinByForfeitCountdownStarted"
+    {
+        "#format"   "{1:s},{2:s},{3:s},{4:s}"
+        "en"        "{1} will win in {2} unless a player from {3} rejoins the game. This request can be canceled with {4}."
+    }
+    "WinByForfeitCountdownCanceled"
+    {
+        "#format"   "{1:s}"
+        "en"        "The request from {1} to win by forfeit was canceled."
+    }
+    "TeamForfeited"
+    {
+        "#format"   "{1:s}"
+        "en"        "{1} forfeited the series."
+    }
+    "AllPlayersLeftTieCountdown"
+    {
+        "#format"   "{1:s}"
+        "en"        "Both teams left the server. At least one player from each team must rejoin within {1} or the series will end in a tie."
+    }
+    "TieCountdownCanceled"
+    {
+        "en"        "The countdown to a tie was canceled as both teams now have players."
     }
 }

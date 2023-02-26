@@ -8,18 +8,16 @@ Action StartKnifeRound(Handle timer) {
   g_KnifeChangedCvars = ExecuteAndSaveCvars(knifeConfig);
 
   Get5_MessageToAll("%t", "KnifeIn5SecInfoMessage");
-  if (InWarmup()) {
-    EndWarmup(5);
-  } else {
-    RestartGame(5);
-  }
-
+  StartWarmup(5);
   g_KnifeCountdownTimer = CreateTimer(10.0, Timer_AnnounceKnife);
   return Plugin_Handled;
 }
 
 static Action Timer_AnnounceKnife(Handle timer) {
   g_KnifeCountdownTimer = INVALID_HANDLE;
+  if (g_GameState == Get5State_None) {
+    return;
+  }
   AnnouncePhaseChange("{GREEN}%t", "KnifeInfoMessage");
 
   Get5KnifeRoundStartedEvent knifeEvent = new Get5KnifeRoundStartedEvent(g_MatchID, g_MapNumber);
@@ -33,7 +31,6 @@ static Action Timer_AnnounceKnife(Handle timer) {
   EventLogger_LogAndDeleteEvent(knifeEvent);
 
   g_HasKnifeRoundStarted = true;
-  return Plugin_Handled;
 }
 
 void StartKnifeTimer() {
@@ -53,11 +50,11 @@ void PromptForKnifeDecision() {
     return;
   }
   char formattedStayCommand[64];
-  FormatChatCommand(formattedStayCommand, sizeof(formattedStayCommand), "!stay");
+  GetChatAliasForCommand(Get5ChatCommand_Stay, formattedStayCommand, sizeof(formattedStayCommand), true);
   char formattedSwapCommand[64];
-  FormatChatCommand(formattedSwapCommand, sizeof(formattedSwapCommand), "!swap");
-  Get5_MessageToAll("%t", "WaitingForEnemySwapInfoMessage",
-    g_FormattedTeamNames[g_KnifeWinnerTeam], formattedStayCommand, formattedSwapCommand);
+  GetChatAliasForCommand(Get5ChatCommand_Swap, formattedSwapCommand, sizeof(formattedSwapCommand), true);
+  Get5_MessageToAll("%t", "WaitingForEnemySwapInfoMessage", g_FormattedTeamNames[g_KnifeWinnerTeam],
+                    formattedStayCommand, formattedSwapCommand);
 }
 
 static void PerformSideSwap(bool swap) {
@@ -104,9 +101,8 @@ static void PerformSideSwap(bool swap) {
 static void EndKnifeRound(bool swap) {
   PerformSideSwap(swap);
 
-  Get5KnifeRoundWonEvent knifeEvent =
-      new Get5KnifeRoundWonEvent(g_MatchID, g_MapNumber, g_KnifeWinnerTeam,
-                                 view_as<Get5Side>(g_TeamStartingSide[g_KnifeWinnerTeam]), swap);
+  Get5KnifeRoundWonEvent knifeEvent = new Get5KnifeRoundWonEvent(
+    g_MatchID, g_MapNumber, g_KnifeWinnerTeam, view_as<Get5Side>(g_TeamStartingSide[g_KnifeWinnerTeam]), swap);
 
   LogDebug("Calling Get5_OnKnifeRoundWon()");
 
@@ -134,8 +130,7 @@ static bool AwaitingKnifeDecision(int client) {
 
 Action Command_Stay(int client, int args) {
   if (AwaitingKnifeDecision(client)) {
-    Get5_MessageToAll("%t", "TeamDecidedToStayInfoMessage",
-                      g_FormattedTeamNames[g_KnifeWinnerTeam]);
+    Get5_MessageToAll("%t", "TeamDecidedToStayInfoMessage", g_FormattedTeamNames[g_KnifeWinnerTeam]);
     EndKnifeRound(false);
   }
   return Plugin_Handled;
@@ -143,37 +138,10 @@ Action Command_Stay(int client, int args) {
 
 Action Command_Swap(int client, int args) {
   if (AwaitingKnifeDecision(client)) {
-    Get5_MessageToAll("%t", "TeamDecidedToSwapInfoMessage",
-                      g_FormattedTeamNames[g_KnifeWinnerTeam]);
+    Get5_MessageToAll("%t", "TeamDecidedToSwapInfoMessage", g_FormattedTeamNames[g_KnifeWinnerTeam]);
     EndKnifeRound(true);
-  } else if (g_GameState == Get5State_Warmup && g_InScrimMode &&
-             GetClientMatchTeam(client) == Get5Team_1) {
+  } else if (g_GameState == Get5State_Warmup && g_InScrimMode && GetClientMatchTeam(client) == Get5Team_1) {
     PerformSideSwap(true);
-  }
-  return Plugin_Handled;
-}
-
-Action Command_Ct(int client, int args) {
-  if (IsPlayer(client)) {
-    if (GetClientTeam(client) == CS_TEAM_CT)
-      FakeClientCommand(client, "sm_stay");
-    else if (GetClientTeam(client) == CS_TEAM_T)
-      FakeClientCommand(client, "sm_swap");
-  }
-
-  LogDebug("cs team = %d", GetClientTeam(client));
-  LogDebug("m_iCoachingTeam = %d", GetEntProp(client, Prop_Send, "m_iCoachingTeam"));
-  LogDebug("m_iPendingTeamNum = %d", GetEntProp(client, Prop_Send, "m_iPendingTeamNum"));
-
-  return Plugin_Handled;
-}
-
-Action Command_T(int client, int args) {
-  if (IsPlayer(client)) {
-    if (GetClientTeam(client) == CS_TEAM_T)
-      FakeClientCommand(client, "sm_stay");
-    else if (GetClientTeam(client) == CS_TEAM_CT)
-      FakeClientCommand(client, "sm_swap");
   }
   return Plugin_Handled;
 }
@@ -181,8 +149,7 @@ Action Command_T(int client, int args) {
 static Action Timer_ForceKnifeDecision(Handle timer) {
   g_KnifeDecisionTimer = INVALID_HANDLE;
   if (g_GameState == Get5State_WaitingForKnifeRoundDecision && g_KnifeWinnerTeam != Get5Team_None) {
-    Get5_MessageToAll("%t", "TeamLostTimeToDecideInfoMessage",
-                      g_FormattedTeamNames[g_KnifeWinnerTeam]);
+    Get5_MessageToAll("%t", "TeamLostTimeToDecideInfoMessage", g_FormattedTeamNames[g_KnifeWinnerTeam]);
     EndKnifeRound(false);
   }
 }

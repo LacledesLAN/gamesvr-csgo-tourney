@@ -1,5 +1,5 @@
-#define CVAR_NAME_MAX_LENGTH 128
-#define CVAR_VALUE_MAX_LENGTH 128
+#define CVAR_NAME_MAX_LENGTH  128
+#define CVAR_VALUE_MAX_LENGTH 513
 
 // Returns a cvar Handle that can be used to restore cvars.
 stock Handle SaveCvars(ArrayList cvarNames) {
@@ -26,8 +26,7 @@ stock Handle SaveCvars(ArrayList cvarNames) {
 }
 
 // Restores cvars to their previous value using a return value of SaveCvars.
-stock void RestoreCvars(Handle& cvarStorage, bool close = true) {
-  LogDebug("Restoring match cvars.");
+stock void RestoreCvars(Handle &cvarStorage) {
   if (cvarStorage == INVALID_HANDLE) {
     return;
   }
@@ -38,21 +37,17 @@ stock void RestoreCvars(Handle& cvarStorage, bool close = true) {
   char value[CVAR_VALUE_MAX_LENGTH];
   for (int i = 0; i < cvarNameList.Length; i++) {
     cvarNameList.GetString(i, name, sizeof(name));
-    cvarValueList.GetString(i, value, sizeof(value));
-
     Handle cvar = FindConVar(name);
     if (cvar != INVALID_HANDLE) {
+      cvarValueList.GetString(i, value, sizeof(value));
       SetConVarString(cvar, value);
     }
   }
-
-  if (close) {
-    CloseCvarStorage(cvarStorage);
-  }
+  CloseCvarStorage(cvarStorage);
 }
 
 // Closes a cvar storage object returned by SaveCvars.
-stock void CloseCvarStorage(Handle& cvarStorage) {
+stock void CloseCvarStorage(Handle &cvarStorage) {
   if (cvarStorage == INVALID_HANDLE) {
     return;
   }
@@ -73,7 +68,7 @@ stock bool __firstWord(const char[] line, char[] buffer, int len) {
     splitIndex = StrContains(line, "\t");
 
   if (splitIndex == -1) {
-    Format(buffer, len, "");
+    FormatEx(buffer, len, "");
     return false;
   }
 
@@ -92,7 +87,7 @@ stock Handle ExecuteAndSaveCvars(const char[] cfgFile) {
   char nameBuffer[CVAR_NAME_MAX_LENGTH];
 
   char filePath[PLATFORM_MAX_PATH];
-  Format(filePath, sizeof(filePath), "cfg/%s", cfgFile);
+  FormatEx(filePath, sizeof(filePath), "cfg/%s", cfgFile);
 
   File file = OpenFile(filePath, "r");
   if (file != null) {

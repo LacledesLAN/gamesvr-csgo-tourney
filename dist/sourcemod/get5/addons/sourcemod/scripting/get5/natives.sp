@@ -7,6 +7,7 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
   CreateNative("Get5_MessageToAll", Native_MessageToAll);
   CreateNative("Get5_LoadMatchConfig", Native_LoadMatchConfig);
   CreateNative("Get5_LoadMatchConfigFromURL", Native_LoadMatchConfigFromURL);
+  CreateNative("Get5_LoadBackupFromURL", Native_LoadBackupFromURL);
   CreateNative("Get5_AddPlayerToTeam", Native_AddPlayerToTeam);
   CreateNative("Get5_SetPlayerName", Native_SetPlayerName);
   CreateNative("Get5_RemovePlayerFromTeam", Native_RemovePlayerFromTeam);
@@ -44,9 +45,9 @@ public int Native_Message(Handle plugin, int numParams) {
 
   char finalMsg[1024];
   if (StrEqual(prefix, ""))
-    Format(finalMsg, sizeof(finalMsg), " %s", buffer);
+    FormatEx(finalMsg, sizeof(finalMsg), " %s", buffer);
   else
-    Format(finalMsg, sizeof(finalMsg), "%s %s", prefix, buffer);
+    FormatEx(finalMsg, sizeof(finalMsg), "%s %s", prefix, buffer);
 
   if (client == 0) {
     Colorize(finalMsg, sizeof(finalMsg), true);
@@ -75,9 +76,9 @@ public int Native_MessageToTeam(Handle plugin, int numParams) {
 
     char finalMsg[1024];
     if (StrEqual(prefix, ""))
-      Format(finalMsg, sizeof(finalMsg), " %s", buffer);
+      FormatEx(finalMsg, sizeof(finalMsg), " %s", buffer);
     else
-      Format(finalMsg, sizeof(finalMsg), "%s %s", prefix, buffer);
+      FormatEx(finalMsg, sizeof(finalMsg), "%s %s", prefix, buffer);
 
     Colorize(finalMsg, sizeof(finalMsg));
     PrintToChat(i, finalMsg);
@@ -101,9 +102,9 @@ public int Native_MessageToAll(Handle plugin, int numParams) {
 
     char finalMsg[1024];
     if (StrEqual(prefix, ""))
-      Format(finalMsg, sizeof(finalMsg), " %s", buffer);
+      FormatEx(finalMsg, sizeof(finalMsg), " %s", buffer);
     else
-      Format(finalMsg, sizeof(finalMsg), "%s %s", prefix, buffer);
+      FormatEx(finalMsg, sizeof(finalMsg), "%s %s", prefix, buffer);
 
     if (i == 0) {
       Colorize(finalMsg, sizeof(finalMsg), true);
@@ -118,7 +119,10 @@ public int Native_MessageToAll(Handle plugin, int numParams) {
 public int Native_LoadMatchConfig(Handle plugin, int numParams) {
   char filename[PLATFORM_MAX_PATH];
   GetNativeString(1, filename, sizeof(filename));
-  return LoadMatchConfig(filename);
+  char error[PLATFORM_MAX_PATH];
+  if (!LoadMatchConfig(filename, error)) {
+    MatchConfigFail(error);
+  }
 }
 
 public int Native_LoadMatchConfigFromURL(Handle plugin, int numParams) {
@@ -126,7 +130,25 @@ public int Native_LoadMatchConfigFromURL(Handle plugin, int numParams) {
   GetNativeString(1, url, sizeof(url));
   ArrayList paramNames = view_as<ArrayList>(GetNativeCell(2));
   ArrayList paramValues = view_as<ArrayList>(GetNativeCell(3));
-  return LoadMatchFromUrl(url, paramNames, paramValues);
+  ArrayList headerNames = view_as<ArrayList>(GetNativeCell(4));
+  ArrayList headerValues = view_as<ArrayList>(GetNativeCell(5));
+  char error[PLATFORM_MAX_PATH];
+  if (!LoadMatchFromUrl(url, paramNames, paramValues, headerNames, headerValues, error)) {
+    LogError(error);
+  }
+}
+
+public int Native_LoadBackupFromURL(Handle plugin, int numParams) {
+  char url[PLATFORM_MAX_PATH];
+  GetNativeString(1, url, sizeof(url));
+  ArrayList paramNames = view_as<ArrayList>(GetNativeCell(2));
+  ArrayList paramValues = view_as<ArrayList>(GetNativeCell(3));
+  ArrayList headerNames = view_as<ArrayList>(GetNativeCell(4));
+  ArrayList headerValues = view_as<ArrayList>(GetNativeCell(5));
+  char error[PLATFORM_MAX_PATH];
+  if (!LoadBackupFromUrl(url, paramNames, paramValues, headerNames, headerValues, error)) {
+    LogError(error);
+  }
 }
 
 public int Native_AddPlayerToTeam(Handle plugin, int numParams) {
@@ -201,12 +223,14 @@ public int Native_SetMatchID(Handle plugin, int numParams) {
 }
 
 public int Native_GetServerID(Handle plugin, int numParams) {
-  return g_ServerIdCvar.IntValue;
+  char serverId[65];
+  g_ServerIdCvar.GetString(serverId, sizeof(serverId));
+  SetNativeString(1, serverId, GetNativeCell(2));
+  return 0;
 }
 
 public int Native_GetMapNumber(Handle plugin, int numParams) {
-  return g_TeamSeriesScores[Get5Team_1] + g_TeamSeriesScores[Get5Team_2] +
-         g_TeamSeriesScores[Get5Team_None];
+  return g_TeamSeriesScores[Get5Team_1] + g_TeamSeriesScores[Get5Team_2] + g_TeamSeriesScores[Get5Team_None];
 }
 
 public int Native_AddLiveCvar(Handle plugin, int numParams) {
