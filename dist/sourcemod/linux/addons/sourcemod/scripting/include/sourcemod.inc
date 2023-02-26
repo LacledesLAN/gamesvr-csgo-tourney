@@ -398,7 +398,7 @@ native int GetTime(int bigStamp[2]={0,0});
  * Produces a date and/or time string value for a timestamp.
  *
  * See this URL for valid parameters:
- * https://cplusplus.com/reference/ctime/strftime/
+ * http://cplusplus.com/reference/clibrary/ctime/strftime.html
  *
  * Note that available parameters depends on support from your operating system.
  * In particular, ones highlighted in yellow on that page are not currently
