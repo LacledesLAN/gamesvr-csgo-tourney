@@ -16,6 +16,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: lacledeslan/gamesvr-csgo
+          repository: lacledeslan/gamesvr-csgo-tourney
           short-description: "Laclede's LAN Counter-Strike: Global Offensive Tournament Server"
           readme-filepath: ./README.md
