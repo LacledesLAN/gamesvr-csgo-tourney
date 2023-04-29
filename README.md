@@ -22,6 +22,7 @@ customized server.
 | [get5](#get5)                   | Built from `base`, but includes metamod, sourcemod, and get5.     | PRODUCTION |
 | `latest`                        | Alias for the default LL tournament server, currently `base-get5`.| PRODUCTION |
 | [hasty](#hasty)                 | From `latest`, configurations tweak for shorter play and testing. | TESTING    |
+| [warmod](#warmod)               | From base, uses Warmod instead of get5.                           | EMERGENCY  |
 
 ### Build Hierarchy
 

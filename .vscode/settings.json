@@ -1,18 +1,23 @@
 {
     "cSpell.words": [
+        "armsrace",
         "autokick",
+        "cbble",
         "csgo",
         "cvars",
         "dockerhub",
         "gamedata",
         "gamesvr",
+        "gungame",
         "laclede's",
         "laclede’s",
         "lacledeslan",
+        "mapgroups",
         "maplist",
         "matchid",
         "maxrounds",
         "metamod",
+        "poolday",
         "sourcemod",
         "vdfs",
         "warmod"
@@ -28,7 +33,7 @@
         "dist/get5/*.md"
     ],
     "shellcheck.exclude": ["1091"],
-    "terminal.integrated.scrollback": 3000,
+    "terminal.integrated.scrollback": 3500,
     "[markdown]": {
         "cSpell.fixSpellingWithRenameProvider": true,
         "cSpell.advanced.feature.useReferenceProviderWithRename": true,

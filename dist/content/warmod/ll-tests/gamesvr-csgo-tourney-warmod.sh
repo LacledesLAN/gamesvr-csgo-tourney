@@ -155,28 +155,43 @@ should_lack 'map load failed:' 'Server was able to load custom-content the map';
 should_lack 'Your server needs to be restarted in order to receive the latest update.' 'Server is not reporting itself as out of date';
 should_echo 'version' 'Exe version'
 
-# LL Settings
+# Logging Settings
 should_have 'Server logging enabled.' 'Logging is enabled';
 should_have 'Server logging data to file logs/' 'Server is logging to the logs directory';
 
+# Verify server responds to commands
+should_echo "say STARTING COMMAND TESTS" 'Console: STARTING COMMAND TESTS';
+should_echo "sv_cheats" '"sv_cheats" = "0" notify replicated';
 
-# Check SourceMod/MetaMod plugins
-should_echo 'sm plugins list' ''
+# Check Metamod:Source
+should_echo 'meta version' ' Metamod:Source Version Information'
+
+# Check SourceMod:Source plugins
+should_echo 'sm plugins list' '\[SM\] Listing'
+should_lack 'Unknown command "sm"' 'sm command should be working'
+## general checks
+should_lack 'Successfully updated gamedata file "' 'SourceMod is not self updating'
+should_lack 'SourceMod has been updated, please reload it or restart your server' 'SourceMod is not requesting restart'
+should_lack 'Host_Error: DLL_Crosshairangle: not a client' '2019.03.28 bug not found (https://forums.alliedmods.net/showthread.php?t=315229)'
+should_lack '<Error>' 'no sm plugins showing error state';
+## expected plugins
 should_have '\[BFG\] WarMod' 'LLWarMod';
 should_have 'Admin File Reader' 'Admin file reader plugin';
 should_have 'Anti-Flood' "anti-flood plugin";
 should_have 'Basic Comm Control' 'Basic comm control plugin';
 should_have 'Basic Info Triggers' 'Basic info triggers plugin';
 should_have 'Log Connections - LL Mod' 'LL version of "log connections" plugin';
-should_have 'WarMod \[BFG\] WarmUp Config Loaded' 'WarMod loaded config properly';
-should_lack 'Successfully updated gamedata file "' 'SourceMod is not self updating'
-should_lack 'SourceMod has been updated, please reload it or restart your server' 'SourceMod is not requesting restart'
-should_lack 'Host_Error: DLL_Crosshairangle: not a client' '2019.03.28 bug not found (https://forums.alliedmods.net/showthread.php?t=315229)'
-should_lack '<Error>' 'no sm plugins showing error state';
+## unexpected plugins
+should_lack ' "Fun Commands' "source mod plugin 'fun commands' should not be loaded"
+should_lack ' "Fun Votes' "source mod plugin 'fun votes' should not be loaded"
+should_lack ' "Nextmap' "source mod plugin 'nextmap' should not be loaded"
+should_lack ' "Reserved Slots' "source mod plugin 'reserved slots' should not be loaded"
+should_lack ' "Sound Commands" (' "source mod plugin 'sound commands' should not be loaded"
 
-# Verify server responds to commands
-echo "Starting command tests";
-should_echo "say STARTING COMMAND TESTS" 'Console: STARTING COMMAND TESTS';
+## Warmod checks
+should_have 'WarMod \[BFG\] WarmUp Config Loaded' 'WarMod loaded config properly';
+
+
 
 # Verify gamemode_competitive_server.cfg
 echo "...using gamemode_competitive_server.cfg";
@@ -187,8 +202,8 @@ should_echo "mp_startmoney" '"mp_startmoney" = "800"';
 should_echo "mp_match_can_clinch" '"mp_match_can_clinch" = "1"';
 should_echo "mp_maxrounds" '"mp_maxrounds" = "30"';
 should_echo "mp_round_restart_delay" '"mp_round_restart_delay" = "5"';
-should_echo "mp_roundtime" '"mp_roundtime" = "1.75"';
-should_echo "mp_roundtime_defuse" '"mp_roundtime_defuse" = "1.75"';
+should_echo "mp_roundtime" '"mp_roundtime" = "1.92"';
+should_echo "mp_roundtime_defuse" '"mp_roundtime_defuse" = "1.92"';
 should_echo "wm_auto_knife" '"wm_auto_knife" = "1"';
 
 # Verify ruleset_default.cfg

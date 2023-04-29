@@ -16,10 +16,6 @@ docker build . -f linux.get5.Dockerfile --rm -t lacledeslan/gamesvr-csgo-tourney
 docker run -it --rm lacledeslan/gamesvr-csgo-tourney:get5 ./ll-tests/gamesvr-csgo-tourney-get5.sh;
 docker push lacledeslan/gamesvr-csgo-tourney:get5
 
-##
-## TODO: Warmod [BFG]
-##
-
 echo -e '\n\033[1m[Build tourney:latest]\033[0m'
 docker tag lacledeslan/gamesvr-csgo-tourney:get5 lacledeslan/gamesvr-csgo-tourney:latest
 docker push lacledeslan/gamesvr-csgo-tourney:latest
@@ -27,3 +23,8 @@ docker push lacledeslan/gamesvr-csgo-tourney:latest
 echo -e '\n\033[1m[Build tourney:hasty]\033[0m'
 docker build . -f linux.latest-hasty.Dockerfile --rm -t lacledeslan/gamesvr-csgo-tourney:latest-hasty --build-arg BUILDNODE="$(cat /proc/sys/kernel/hostname)";
 docker push lacledeslan/gamesvr-csgo-tourney:latest-hasty
+
+echo -e '\n\033[1m[Build tourney:warmod]\033[0m'
+docker build . -f linux.warmod.Dockerfile --rm -t lacledeslan/gamesvr-csgo-tourney:warmod --build-arg BUILDNODE="$(cat /proc/sys/kernel/hostname)";
+docker run -it --rm lacledeslan/gamesvr-csgo-tourney:warmod ./ll-tests/gamesvr-csgo-tourney-warmod.sh;
+docker push lacledeslan/gamesvr-csgo-tourney:warmod
