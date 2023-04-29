@@ -3,6 +3,7 @@
         "autokick",
         "csgo",
         "cvars",
+        "dockerhub",
         "gamedata",
         "gamesvr",
         "laclede's",
@@ -22,14 +23,23 @@
         "**/Thumbs.db": true
     },
     "markdownlint.ignore": [
-        "**/LICENSE",
+        ".gitkeep",
+        "LICENSE",
         "dist/get5/*.md"
     ],
     "shellcheck.exclude": ["1091"],
+    "terminal.integrated.scrollback": 3000,
     "[markdown]": {
-        "editor.rulers": [140],
+        "cSpell.fixSpellingWithRenameProvider": true,
+        "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+        "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/",
+        "editor.rulers": [120],
         "editor.unicodeHighlight.ambiguousCharacters": true,
         "editor.unicodeHighlight.invisibleCharacters": true,
-        "editor.wordWrap": "on",
+        "editor.wordWrap": "on"
+    },
+    "[shellscript]": {
+        "editor.rulers": [100],
+        "files.eol": "\n"
     }
 }

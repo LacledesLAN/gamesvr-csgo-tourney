@@ -1,21 +1,21 @@
 # Working with `/dist`
 
-| Directory        | Contents                                 | Version notes                              | Image Mount Location |
-| ---------------- | ---------------------------------------- | ------------------------------------------ | -------------------- |
-| /content         | Content for specific Docker images.      |                                            |                      |
-|   ├─/base        | LL tournament configs.                   |                                            | /app                 |
-|   └─/get5        | LL configs for the `get5` SM plugin.     |                                            | /app                 |
-| /metamod/linux   | Linux version of `Metamod:Source`.       | version 1.11 - build 1148 as of 2023/02/25 | /app/csgo            |
-| /sourcemod       | SourceMod and related content.           |                                            |                      |
-|   ├─/get5        | `get5` SourceMod plugin.                 | version 0.13.0 - 9a54d1a as of 2023/02/25  | /app/csgo            |
-|   ├─/linux       | Linux version of `SourceMod`.            | dev build - build 6931 as of 2023/02/25    | /app/csgo            |
-|   ├─/ll          | Common LL SourceMod plugins and configs. |                                            | /app/csgo            |
-|   └─/warmod      | `WarMod [BFG] SourceMod` plugin.         | version 22.09.26.1915                      | /app/csgo            |
+| Directory       | Contents                                | Version notes                           | Image Location |
+| --------------- | --------------------------------------- | --------------------------------------- | -------------- |
+| /content        | Content for specific Docker images      |                                         |                |
+|   ├─/base       | LL tournament configs                   |                                         | /app           |
+|   └─/get5       | LL configs for the `get5` SM plugin     |                                         | /app           |
+| /metamod/linux  | Linux version of `Metamod:Source`       | v1.11 - build 1148 as of 2023/02/25     | /app/csgo      |
+| /sourcemod      | SourceMod and related content           |                                         |                |
+|   ├─/get5       | `get5` SourceMod plugin                 | v0.14.5 - 39617da as of 2023/04/28      | /app/csgo      |
+|   ├─/linux      | Linux version of `SourceMod`            | dev build - build 6934 as of 2023/04/28 | /app/csgo      |
+|   ├─/ll         | Common LL SourceMod plugins and configs |                                         | /app/csgo      |
+|   └─/warmod     | `WarMod [BFG] SourceMod` plugin         | v22.09.26.1915                          | /app/csgo      |
 
 ## Updating Third-Party Content
 
-This repo includes mechanisms to prevent unwanted content from propagating. This allows us to update third-party content by simply
-downloading and extract it into the correct destination directories.
+This repo includes mechanisms to prevent unwanted content from propagating. This allows us to update third-party content
+by simply downloading and extract it into the correct destination directories.
 
 * `/.dockerignore` will prevent unwanted content from making into the Docker images.
 * `./dist/.gitignore` will prevent unwanted content from making into into the git repo upon commits.

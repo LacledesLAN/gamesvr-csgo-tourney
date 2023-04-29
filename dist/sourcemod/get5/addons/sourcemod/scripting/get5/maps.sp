@@ -1,6 +1,6 @@
 void ChangeMap(const char[] map, float delay = 3.0) {
   char formattedMapName[64];
-  FormatMapName(map, formattedMapName, sizeof(formattedMapName), true, true);
+  FormatMapName(map, formattedMapName, sizeof(formattedMapName), g_FormatMapNamesCvar.BoolValue, true);
   Get5_MessageToAll("%t", "ChangingMapInfoMessage", formattedMapName);
 
   // pass the "true" name to a timer to changelevel
@@ -20,16 +20,23 @@ static Action Timer_DelayedChangeMap(Handle timer, Handle pack) {
   ResetPack(pack);
   ReadPackString(pack, map, sizeof(map));
   CloseHandle(pack);
-  if (StrContains(map, "workshop", false) == 0) {
-    ServerCommand("host_workshop_map %d", GetMapIdFromString(map));
+  char workshopMap[PLATFORM_MAX_PATH];
+  if (IsMapWorkshop(map) && GetMapIdFromString(map, workshopMap, sizeof(workshopMap))) {
+    ServerCommand("host_workshop_map %s", workshopMap);
   } else {
     ServerCommand("changelevel %s", map);
   }
   return Plugin_Handled;
 }
 
-int GetMapIdFromString(const char[] map) {
+bool GetMapIdFromString(const char[] map, char[] buffer, const int bufferSize) {
   char buffers[4][PLATFORM_MAX_PATH];
   ExplodeString(map, "/", buffers, sizeof(buffers), PLATFORM_MAX_PATH);
-  return StringToInt(buffers[1]);
+  int value[2];
+  StringToInt64(buffers[1], value);
+  if (value[0] > 0) {
+    strcopy(buffer, bufferSize, buffers[1]);
+    return true;
+  }
+  return false;
 }

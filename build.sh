@@ -1,5 +1,6 @@
 #!/bin/bash
-set -e
+set -e;
+set -u;
 
 echo -e '\n\033[1m[Build tourney:base]\033[0m'
 docker build . -f linux.base.Dockerfile --rm -t lacledeslan/gamesvr-csgo-tourney:base --pull --build-arg BUILDNODE="$(cat /proc/sys/kernel/hostname)";
