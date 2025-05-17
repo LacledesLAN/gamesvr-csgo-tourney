@@ -1,11 +1,8 @@
 # Laclede's LAN CSGO Tournament Server in Docker
 
-![thumb-csgo-tourney](https://raw.githubusercontent.com/LacledesLAN/gamesvr-csgo-tourney/master/.misc/thumb-csgo-tourney.png "thumb-csgo-tourney")
+**THIS PROJECT IS RETIRED AND NO LONGER SUPPORTED**
 
-This repository is maintained by [Laclede's LAN](https://lacledeslan.com). Its contents are heavily tailored and tweaked
-for use at our charity LAN-Parties. For third-parties we recommend using this repo only as a reference example and then
-building your own using [gamesvr-csgo](https://github.com/LacledesLAN/gamesvr-csgo) as the base image for your
-customized server.
+![thumb-csgo-tourney](https://raw.githubusercontent.com/LacledesLAN/gamesvr-csgo-tourney/master/.misc/thumb-csgo-tourney.png "thumb-csgo-tourney")
 
 ## Table of Content
 
@@ -49,35 +46,10 @@ This repo includes content from other projects, including [Metamod:Source](https
 [SourceMod](https://www.sourcemod.net/), and [SourceMod get5 plugin](https://github.com/splewis/get5). For details see
 `[./dist/README.md](./dist/README.md)`.
 
-## Linux
-
-### Get5
-
-`get5` is derived from `base` but includes the MetaMod plugin [get5](https://github.com/splewis/get5) and its
-prerequisites [Metamod:Source](https://www.sourcemm.net/) and [SourceMod](https://www.sourcemod.net/).
-
-#### Download
-
-```shell
-docker pull lacledeslan/gamesvr-csgo-tourney:get5;
-```
-
-### Run Self-Tests
-
-```shell
-docker run --rm lacledeslan/gamesvr-csgo-tourney:get5 ./ll-tests/gamesvr-csgo-tourney-get5.sh;
-```
-
 ### Base-Overtime
 
 The `base-overtime` image is mod-free, containing LL tournament configs that have been tweaked to start the server in
 overtime mode.
-
-#### Start Overtime Server
-
-```shell
-TODO!
-```
 
 ### Hasty
 
